@@ -22,7 +22,8 @@ import {
   AboutContainer,
   SkillContainer,
   QualificationContainer,
-  ServiceContainer
+  ServiceContainer,
+  PortfolioContainer
 } from "../styles/home";
 
 interface ModalViewerProps {
@@ -311,6 +312,45 @@ export default function Home() {
               </div>
             </div>
           </ServiceContainer>
+        </section>
+
+        <section className="portifolio section" id="portfolio">
+          <h2 className="section__title"></h2>
+          <span className="section__subtitle"></span>
+
+          <PortfolioContainer className="container">
+            <div>
+              <div className="portfolio__content grid">
+                <img src="" alt="" className="portfolio__img" />
+
+                <div className="portfolio__data">
+                  <h3 className="portfolio__title">Modern Website</h3>
+                  <p className="portfolio__description">
+                    Website adaptable to all devices, with ui components and animated interactions.
+                  </p>
+                  <a href="" className="button button--flex button-small portfolio__button">
+                    Demo
+                    <TiArrowRight />
+                  </a>
+                </div>
+              </div>
+
+              <div className="portfolio__content grid">
+                <img src="" alt="" className="portfolio__img" />
+
+                <div className="portfolio__data">
+                  <h3 className="portfolio__title">Modern Website</h3>
+                  <p className="portfolio__description">
+                    Website adaptable to all devices, with ui components and animated interactions.
+                  </p>
+                  <a href="" className="button button--flex button-small portfolio__button">
+                    Demo
+                    <TiArrowRight />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </PortfolioContainer>
         </section>
       </main>
     </>

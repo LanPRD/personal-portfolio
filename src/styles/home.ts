@@ -215,3 +215,30 @@ export const ServiceContainer = styled.div`
     }
   }
 `;
+
+export const PortfolioContainer = styled.div`
+  overflow: initial;
+
+  .portfolio__content {
+    padding: 0 1.5rem;
+  }
+
+  .portfolio__img {
+    width: 265px;
+    border-radius: 0.5rem;
+    justify-self: center;
+  }
+
+  .portfolio__title {
+    font-size: var(--h3-font-size);
+    margin-bottom: var(--mb-0-5);
+  }
+
+  .portfolio__description {
+    margin-bottom: var(--mb-0-75);
+  }
+
+  .portfolio__button:hover .button__icon {
+    transform: translateX(0.25rem);
+  }
+`;
