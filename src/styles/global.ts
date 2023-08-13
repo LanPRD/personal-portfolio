@@ -129,9 +129,25 @@ export default createGlobalStyle`
     }
   }
 
+  .button__icon {
+    font-size: 1.25rem;
+    margin-left: var(--mb-0-5);
+    transition: 0.3s;
+  }
+
+  .button--white {
+    background-color: #fff;
+    color: var(--first-color);
+  }
+
   .button--flex {
     display: inline-flex;
     align-items: center;
+
+    &:hover {
+      background-color: #fff;
+    }
+
   }
 
   .button--small {

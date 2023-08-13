@@ -2,6 +2,7 @@ import Head from "next/head";
 
 import { AboutSection } from "../templates/Home/AboutSection";
 import { PortfolioSection } from "../templates/Home/PortfolioSection";
+import { ProjectSection } from "../templates/Home/ProjectSection";
 import { QualificationSection } from "../templates/Home/QualificationSection";
 import { ServicesSection } from "../templates/Home/ServicesSection";
 import { SkillSection } from "../templates/Home/SkillSection";
@@ -21,6 +22,7 @@ export default function Home() {
         <QualificationSection />
         <ServicesSection />
         <PortfolioSection />
+        <ProjectSection />
       </main>
     </>
   );

@@ -219,3 +219,33 @@ export const ServiceContainer = styled.div`
 export const PortfolioContainer = styled.div`
   overflow: initial;
 `;
+
+export const ProjectSectionContainer = styled.div`
+  .project {
+    text-align: center;
+  }
+
+  .project__bg {
+    background-color: var(--first-color-second);
+    padding-top: 3rem;
+  }
+
+  .project__title {
+    font-size: var(--h2-font-size);
+    margin-bottom: var(--mb-0-75);
+  }
+
+  .project__description {
+    mix-blend-mode: var(--mn-1-5);
+  }
+
+  .project__title,
+  .project__description {
+    color: #fff;
+  }
+
+  .project__img {
+    width: 232px;
+    justify-self: center;
+  }
+`;
