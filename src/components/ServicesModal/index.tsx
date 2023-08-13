@@ -12,7 +12,7 @@ interface ServicesModalProps {
   callbackShowModal: Dispatch<SetStateAction<{ isVisible: boolean; modalIndex?: number }>>;
 }
 
-export default function ServicesModal({ services, title, isVisible, callbackShowModal }: ServicesModalProps) {
+export function ServicesModal({ services, title, isVisible, callbackShowModal }: ServicesModalProps) {
   return (
     <ModalContainer isVisible={isVisible}>
       <div className="services__modal-content">

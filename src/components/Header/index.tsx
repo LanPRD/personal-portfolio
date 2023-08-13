@@ -1,15 +1,14 @@
 import { useState } from "react";
-
-import { BiHomeAlt, BiUser, BiFile, BiBriefcase, BiMessageSquareDetail } from "react-icons/bi";
+import { AiOutlineAppstore } from "react-icons/ai";
+import { BiBriefcase, BiFile, BiHomeAlt, BiMessageSquareDetail, BiUser } from "react-icons/bi";
 import { IoImageOutline } from "react-icons/io5";
 import { TiTimes } from "react-icons/ti";
-import { AiOutlineAppstore } from "react-icons/ai";
 
-import Anchor from "../Anchor";
+import { Anchor } from "../Anchor";
 
 import { HeaderTag, NavTag } from "./styles";
 
-export default function Header() {
+export function Header() {
   const [showMenu, setShowMenu] = useState<boolean>(false);
 
   return (

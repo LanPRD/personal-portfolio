@@ -10,31 +10,6 @@ export const HomeContainer = styled.div`
   }
 `;
 
-export const HomeData = styled.div`
-  grid-column: 1/3;
-
-  .home__title {
-    font-size: var(--big-font-size);
-  }
-
-  .home__subtitle {
-    font-size: var(--h3-font-size);
-    color: var(--text-color);
-    font-weight: var(--font-medium);
-    margin-bottom: var(--mb-0-75);
-  }
-
-  .home__description {
-    margin-bottom: var(--mb-2);
-  }
-
-  .button__icon {
-    font-size: 2rem;
-    margin-left: var(--mb-0-5);
-    transition: 0.3s;
-  }
-`;
-
 export const HomeScroll = styled.div`
   display: none;
 
@@ -60,6 +35,31 @@ export const HomeScroll = styled.div`
 
   .home__scroll-name {
     font-size: 2rem;
+  }
+`;
+
+export const HomeData = styled.div`
+  grid-column: 1/3;
+
+  .home__title {
+    font-size: var(--big-font-size);
+  }
+
+  .home__subtitle {
+    font-size: var(--h3-font-size);
+    color: var(--text-color);
+    font-weight: var(--font-medium);
+    margin-bottom: var(--mb-0-75);
+  }
+
+  .home__description {
+    margin-bottom: var(--mb-2);
+  }
+
+  .button__icon {
+    font-size: 2rem;
+    margin-left: var(--mb-0-5);
+    transition: 0.3s;
   }
 `;
 
@@ -218,27 +218,4 @@ export const ServiceContainer = styled.div`
 
 export const PortfolioContainer = styled.div`
   overflow: initial;
-
-  .portfolio__content {
-    padding: 0 1.5rem;
-  }
-
-  .portfolio__img {
-    width: 265px;
-    border-radius: 0.5rem;
-    justify-self: center;
-  }
-
-  .portfolio__title {
-    font-size: var(--h3-font-size);
-    margin-bottom: var(--mb-0-5);
-  }
-
-  .portfolio__description {
-    margin-bottom: var(--mb-0-75);
-  }
-
-  .portfolio__button:hover .button__icon {
-    transform: translateX(0.25rem);
-  }
 `;

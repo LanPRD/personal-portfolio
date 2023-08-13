@@ -10,7 +10,7 @@ interface QualificationProps {
   isLast?: boolean;
 }
 
-export default function Qualification({ calendar, subtitle, title, order, isLast = false }: QualificationProps) {
+export function Qualification({ calendar, subtitle, title, order, isLast = false }: QualificationProps) {
   return (
     <QualificationData>
       {order % 2 === 0 && (

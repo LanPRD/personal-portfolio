@@ -1,10 +1,8 @@
 import Link from "next/link";
-
-import { SiLinkedin, SiInstagram, SiGithub } from "react-icons/si";
-
+import { SiGithub, SiInstagram, SiLinkedin } from "react-icons/si";
 import { SocialDiv } from "./styles";
 
-export default function Social() {
+export function Social() {
   return (
     <SocialDiv>
       <Link href="https://www.linkedin.com/in/lanprd">

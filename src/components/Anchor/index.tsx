@@ -8,7 +8,7 @@ interface AnchorProps {
   className: string;
 }
 
-export default function Anchor({ setShowMenu, icon, text, href, className }: AnchorProps) {
+export function Anchor({ setShowMenu, icon, text, href, className }: AnchorProps) {
   return (
     <LiTag className={className}>
       <a href={`#${href}`} className="nav__link" onClick={() => setShowMenu()}>

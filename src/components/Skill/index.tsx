@@ -5,7 +5,7 @@ interface SkillProps {
   numberPercentage: number;
 }
 
-export default function Skill({ name, numberPercentage }: SkillProps) {
+export function Skill({ name, numberPercentage }: SkillProps) {
   return (
     <SkillData barClassName={numberPercentage}>
       <div className="skills__titles">

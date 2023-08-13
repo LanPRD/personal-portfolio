@@ -6,7 +6,7 @@ interface AboutInfoProps {
   text: string;
 }
 
-export default function AboutInfo({ text, time, typeOftime }: AboutInfoProps) {
+export function AboutInfo({ text, time, typeOftime }: AboutInfoProps) {
   return (
     <Content>
       <span className="about__info-title">{time}+</span>
