@@ -249,3 +249,53 @@ export const ProjectSectionContainer = styled.div`
     justify-self: center;
   }
 `;
+
+export const ContactSectionContainer = styled.div`
+  .contact__container {
+    row-gap: 3rem;
+  }
+
+  .contact__information {
+    display: flex;
+    margin-bottom: var(--mb-2);
+    align-items: center;
+  }
+
+  .contact__icon {
+    font-size: 3rem;
+    color: var(--first-color);
+    margin-right: var(--mb-0-75);
+  }
+
+  .contact__title {
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+  }
+
+  .contact__subtitle {
+    font-size: var(--small-font-size);
+    color: var(--text-color-light);
+  }
+
+  .contact__content {
+    background-color: var(--input-color);
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem 0.25rem;
+  }
+
+  .contact__label {
+    font-size: var(--smaller-font-size);
+    color: var(--title-color);
+  }
+
+  .contact__input {
+    width: 100%;
+    background-color: var(--input-color);
+    color: var(--text-color);
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    border: none;
+    outline: none;
+    padding: 0.25rem 0.5rem 0.5rem 0;
+  }
+`;

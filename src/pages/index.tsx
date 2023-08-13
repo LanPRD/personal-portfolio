@@ -1,6 +1,7 @@
 import Head from "next/head";
 
 import { AboutSection } from "../templates/Home/AboutSection";
+import { ContactSection } from "../templates/Home/ContactSection";
 import { PortfolioSection } from "../templates/Home/PortfolioSection";
 import { ProjectSection } from "../templates/Home/ProjectSection";
 import { QualificationSection } from "../templates/Home/QualificationSection";
@@ -25,6 +26,7 @@ export default function Home() {
         <PortfolioSection />
         <ProjectSection />
         <TestimonialSection />
+        <ContactSection />
       </main>
     </>
   );
