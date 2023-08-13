@@ -236,7 +236,7 @@ export const ProjectSectionContainer = styled.div`
   }
 
   .project__description {
-    mix-blend-mode: var(--mn-1-5);
+    margin-bottom: var(--mb-1-5);
   }
 
   .project__title,

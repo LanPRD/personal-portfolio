@@ -33,7 +33,7 @@ export function SkillSection() {
               <Skill name="JavaScript" numberPercentage={90} />
               <Skill name="React" numberPercentage={90} />
               <Skill name="Next.js" numberPercentage={80} />
-              <Skill name="Flutter/Dart" numberPercentage={35} />
+              <Skill name="Flutter/Dart" numberPercentage={85} />
             </div>
           </SkillContainer>
 

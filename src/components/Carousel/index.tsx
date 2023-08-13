@@ -4,15 +4,26 @@ import React, { ReactChild, ReactFragment, ReactPortal, useEffect, useState } fr
 import { ArrowSvg, CarouselContainer, DotsContainer } from "./styles";
 
 interface CarouselProps {
+  buttons?: boolean;
   children: React.ReactNode;
 }
 
-export function Carousel({ children }: CarouselProps) {
+export function Carousel({ buttons = true, children }: CarouselProps) {
   const [loaded, setLoaded] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
     loop: true,
     initial: 0,
+    slides: {
+      spacing: 48
+    },
+    breakpoints: {
+      "(min-width: 568px)": {
+        slides: {
+          perView: 2
+        }
+      }
+    },
     created(slider) {
       let timeout: ReturnType<typeof setTimeout>;
       let mouseOver = false;
@@ -70,7 +81,7 @@ export function Carousel({ children }: CarouselProps) {
           ))}
         </div>
 
-        {loaded && instanceRef.current && (
+        {loaded && instanceRef.current && !buttons && (
           <>
             <Arrow left onClick={(e: any) => e.stopPropagation() || instanceRef.current?.prev()} />
             <Arrow onClick={(e: any) => e.stopPropagation() || instanceRef.current?.next()} />

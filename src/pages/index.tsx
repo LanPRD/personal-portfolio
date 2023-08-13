@@ -6,6 +6,7 @@ import { ProjectSection } from "../templates/Home/ProjectSection";
 import { QualificationSection } from "../templates/Home/QualificationSection";
 import { ServicesSection } from "../templates/Home/ServicesSection";
 import { SkillSection } from "../templates/Home/SkillSection";
+import { TestimonialSection } from "../templates/Home/TestimonialSection";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
         <ServicesSection />
         <PortfolioSection />
         <ProjectSection />
+        <TestimonialSection />
       </main>
     </>
   );

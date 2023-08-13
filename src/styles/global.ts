@@ -138,16 +138,15 @@ export default createGlobalStyle`
   .button--white {
     background-color: #fff;
     color: var(--first-color);
+
+    &:hover {
+      background-color: #fff;
+    }
   }
 
   .button--flex {
     display: inline-flex;
     align-items: center;
-
-    &:hover {
-      background-color: #fff;
-    }
-
   }
 
   .button--small {
