@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
   :root {
-    --header-height: 3rem;
+    --header-height: 4.4rem;
 
     --hue-color: 152; // Purple 250 - Green 152 - Blue 230 - Pink 340
 
@@ -85,6 +85,43 @@ export default createGlobalStyle`
   a {
     color: inherit;
     text-decoration: none;
+  }
+
+  .active-link {
+    color: var(--first-color) !important;
+  }
+
+  .scroll-header {
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+  }
+
+  .scrollup {
+    position: fixed;
+    right: 2rem;
+    bottom: -20%;
+    background-color: var(--first-color);
+    opacity: 0.8;
+    padding: 0.6rem;
+    border-radius: 0.5rem;
+    z-index: var(--z-tooltip);
+    transition: 0.4s;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      background-color: var(--first-color-alt);
+    }
+  }
+
+  .scrollup__icon {
+    color: #fff;
+    font-size: 2.5rem;
+  }
+
+  .show-scroll {
+    bottom: 6rem;
   }
 
   .section {

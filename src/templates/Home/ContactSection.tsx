@@ -5,7 +5,7 @@ import { ContactSectionContainer } from "./styles";
 export function ContactSection() {
   return (
     <ContactSectionContainer>
-      <section className="contact section" id="section">
+      <section className="contact section" id="contact">
         <h2 className="section__title">Contact me</h2>
         <span className="section__subtitle">Get in touch</span>
 

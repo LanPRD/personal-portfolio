@@ -21,6 +21,7 @@ export function Header() {
         <div className={`nav__menu ${showMenu ? "show-menu" : ""}`} id="nav-menu">
           <ul className="nav__list grid">
             <Anchor
+              activeLink={true}
               className="nav__item"
               href="home"
               icon={<BiHomeAlt />}

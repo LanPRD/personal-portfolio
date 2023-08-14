@@ -10,7 +10,7 @@ export function AboutSection() {
 
       <AboutContainer className="container grid">
         {/* TODO Me */}
-        {/* <Image src="" alt="" className="about__img" /> */}
+        <img src="" alt="" className="about__img" />
 
         <div className="about__data">
           <p className="about__description">Type you description here</p>
@@ -19,13 +19,13 @@ export function AboutSection() {
             <AboutInfo time={1} typeOftime="Years" text="experience" />
             <AboutInfo time={1} typeOftime="Years" text="working with AWS Serverless" />
             <AboutInfo time={1} typeOftime="Years" text="working mobile development" />
+          </div>
 
-            <div className="about__buttons">
-              {/* TODO Add my CV in AWS bucket */}
-              <a /* download="" href="" */ className="button button--flex">
-                Download CV <BiDownload style={{ marginLeft: "8px" }} className="button__icon" />
-              </a>
-            </div>
+          <div className="about__buttons">
+            {/* TODO Add my CV in AWS bucket */}
+            <a /* download="" href="" */ className="button button--flex">
+              Download CV <BiDownload style={{ marginLeft: "8px" }} className="button__icon" />
+            </a>
           </div>
         </div>
       </AboutContainer>
