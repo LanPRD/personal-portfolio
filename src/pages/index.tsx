@@ -1,5 +1,6 @@
 import Head from "next/head";
 
+import { Footer } from "../components/Footer";
 import { AboutSection } from "../templates/Home/AboutSection";
 import { ContactSection } from "../templates/Home/ContactSection";
 import { PortfolioSection } from "../templates/Home/PortfolioSection";
@@ -27,6 +28,7 @@ export default function Home() {
         <ProjectSection />
         <TestimonialSection />
         <ContactSection />
+        <Footer />
       </main>
     </>
   );
