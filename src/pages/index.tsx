@@ -38,7 +38,9 @@ export default function Home() {
 
     window.addEventListener("scroll", scrollActive);
 
-    return () => window.removeEventListener("scroll", scrollActive);
+    return () => {
+      window.removeEventListener("scroll", scrollActive);
+    };
   }, []);
 
   useEffect(() => {
@@ -54,7 +56,9 @@ export default function Home() {
 
     window.addEventListener("scroll", scrollHeader);
 
-    return () => window.removeEventListener("scroll", scrollHeader);
+    return () => {
+      window.removeEventListener("scroll", scrollHeader);
+    };
   }, []);
 
   useEffect(() => {
@@ -70,7 +74,9 @@ export default function Home() {
 
     window.addEventListener("scroll", scrollUp);
 
-    return () => window.removeEventListener("scroll", scrollUp);
+    return () => {
+      window.removeEventListener("scroll", scrollUp);
+    };
   }, []);
 
   return (

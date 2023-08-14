@@ -42,6 +42,15 @@ export default createGlobalStyle`
     --z-modal: 1000;
   }
 
+  body.dark-theme {
+    --first-color-second: hsl(var(--hue-color), 30%, 8%);
+    --title-color: hsl(var(--hue-color), 8%, 95%);
+    --text-color: hsl(var(--hue-color), 8%, 75%);
+    --input-color: hsl(var(--hue-color), 29%, 16%);
+    --body-color: hsl(var(--hue-color), 28%, 12%);
+    --container-color: hsl(var(--hue-color), 29%, 16%);
+  }
+
   * {
     margin: 0;
     padding: 0;
@@ -118,6 +127,22 @@ export default createGlobalStyle`
   .scrollup__icon {
     color: #fff;
     font-size: 2.5rem;
+  }
+
+  .nav__btns {
+    display: flex;
+    align-items: center;
+  }
+
+  .change-theme {
+    font-size: 1.8rem;
+    color: var(--title-color);
+    margin-right: var(--mb-1);
+    cursor: pointer;
+
+    &:hover {
+      color: var(--first-color);
+    }
   }
 
   .show-scroll {

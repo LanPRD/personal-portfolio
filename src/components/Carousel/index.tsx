@@ -59,8 +59,6 @@ export function Carousel({ buttons = true, children }: CarouselProps) {
     }
   });
 
-  console.log(loaded);
-
   const childrenArray = React.Children.toArray(children);
 
   useEffect(() => {
