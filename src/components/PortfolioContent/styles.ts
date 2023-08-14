@@ -39,4 +39,8 @@ export const PortfolioContentStyled = styled.div`
   @media screen and (min-width: 768px) {
     align-items: center;
   }
+
+  @media (min-width: 1024px) {
+    column-gap: 8rem;
+  }
 `;

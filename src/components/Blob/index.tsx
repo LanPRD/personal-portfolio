@@ -17,7 +17,7 @@ export function Blob() {
           />
 
           {/* TODO - add link (change X and Y)*/}
-          <image className="home__blob-img" x="12" y="18" xlinkHref="#" />
+          <image className="home__blob-img" x="60" y="18" xlinkHref="/assets/img/me.jpg" />
         </g>
       </svg>
     </HomeImage>

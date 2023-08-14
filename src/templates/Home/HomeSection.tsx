@@ -17,8 +17,8 @@ export function HomeSection() {
             <h1 className="home__title">Hi, I&apos;m Allan</h1>
             <h3 className="home__subtitle">Fullstack developer</h3>
             <p className="home__description">
-              This is a description This is a description This is a description This is a description This is a
-              description This is a description This is a description
+              Web developer with strong expertise and a passion for turning code into functional solutions. Specializing
+              in web technologies and dedicated to crafting exceptional digital experiences.
             </p>
             <a href="#contact" className="button button--flex">
               Contact Me <BiMessageSquareDetail className="button__icon" />

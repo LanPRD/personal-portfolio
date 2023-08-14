@@ -11,12 +11,6 @@ export function Social() {
         </a>
       </Link>
 
-      <Link href="https://www.instagram.com/">
-        <a target="_blank" className="home__social-icon">
-          <SiInstagram />
-        </a>
-      </Link>
-
       <Link href="https://github.com/LanPRD">
         <a target="_blank" className="home__social-icon">
           <SiGithub />

@@ -74,7 +74,7 @@ export function Carousel({ buttons = true, breakpoints, children }: CarouselProp
           ))}
         </div>
 
-        {loaded && instanceRef.current && !buttons && (
+        {loaded && instanceRef.current && buttons && (
           <>
             <Arrow left onClick={(e: any) => e.stopPropagation() || instanceRef.current?.prev()} />
             <Arrow onClick={(e: any) => e.stopPropagation() || instanceRef.current?.next()} />

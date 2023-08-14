@@ -102,7 +102,7 @@ export const AboutContainer = styled.div`
     width: 200px;
     border-radius: 0.8rem;
     justify-self: center;
-    align-self: center;
+    align-self: flex-start;
   }
 
   .about__description {
@@ -325,6 +325,10 @@ export const ServiceContainer = styled.div`
       /* padding: 9.6rem 0 3.2rem 2.4rem; */
     }
   }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(3, 268px);
+  }
 `;
 
 export const PortfolioContainer = styled.div`
@@ -382,7 +386,7 @@ export const ProjectSectionContainer = styled.div`
     .project__container {
       background-color: var(--first-color-second);
       border-radius: 1.6rem;
-      padding: 4.8rem 4rem 0;
+      padding: 4.8rem 4rem;
       grid-template-columns: 1fr max-content;
       column-gap: 4.8rem;
     }
@@ -444,6 +448,16 @@ export const ContactSectionContainer = styled.div`
 
   @media screen and (min-width: 568px) {
     .contact__container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .contact__form {
+      width: 460px;
+    }
+
+    .contact__inputs {
       grid-template-columns: repeat(2, 1fr);
     }
   }

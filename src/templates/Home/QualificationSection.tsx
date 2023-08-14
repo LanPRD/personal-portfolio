@@ -5,7 +5,7 @@ import { Qualification } from "../../components/Qualification";
 import { QualificationContainer } from "./styles";
 
 export function QualificationSection() {
-  const [tab, setTab] = useState<string>("education");
+  const [tab, setTab] = useState<string>("work");
 
   return (
     <section className="qualification section">
@@ -15,17 +15,17 @@ export function QualificationSection() {
       <QualificationContainer className="qualification__container container">
         <div className="qualification__tabs">
           <div
-            className={`qualification__button button--flex ${tab === "education" ? "qualification__active" : ""}`}
-            onClick={() => setTab("education")}
-          >
-            <FaGraduationCap className="qualification__icon" /> Education
-          </div>
-
-          <div
             className={`qualification__button button--flex ${tab === "work" ? "qualification__active" : ""}`}
             onClick={() => setTab("work")}
           >
             <BiBriefcase className="qualification__icon" /> Work
+          </div>
+
+          <div
+            className={`qualification__button button--flex ${tab === "education" ? "qualification__active" : ""}`}
+            onClick={() => setTab("education")}
+          >
+            <FaGraduationCap className="qualification__icon" /> Education
           </div>
         </div>
 
@@ -87,6 +87,29 @@ export function QualificationSection() {
               subtitle="SuperOpa | OpaBox"
               calendar="04/2021 - 12/2021"
               order={5}
+            />
+
+            <Qualification
+              title="Frontend developer"
+              subtitle="Crypto Lamen"
+              calendar="01/2021 - current"
+              order={6}
+              isLast={true}
+            />
+
+            <Qualification
+              title="Frontend developer"
+              subtitle="LuckySea"
+              calendar="08/2022 - current"
+              order={7}
+              isLast={true}
+            />
+
+            <Qualification
+              title="Frontend developer"
+              subtitle="Unimidia"
+              calendar="11/2022 - current"
+              order={8}
               isLast={true}
             />
           </div>

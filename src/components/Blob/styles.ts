@@ -7,7 +7,7 @@ export const HomeImage = styled.div`
   }
 
   .home__blob-img {
-    width: 170px;
+    width: 100px;
   }
 
   @media screen and (max-width: 350px) {
@@ -24,6 +24,12 @@ export const HomeImage = styled.div`
   @media screen and (min-width: 768px) {
     .home__blob {
       width: 270px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .home__blob {
+      width: 320px;
     }
   }
 `;

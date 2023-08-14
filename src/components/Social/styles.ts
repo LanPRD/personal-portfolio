@@ -13,4 +13,8 @@ export const SocialDiv = styled.div`
       color: var(--first-color-alt);
     }
   }
+
+  @media (min-width: 1024px) {
+    transform: translateX(-9.6rem);
+  }
 `;

@@ -10,14 +10,31 @@ export function PortfolioSection() {
 
       <PortfolioContainer className="container">
         <div>
-          <Carousel>
+          <Carousel buttons>
             <PortfolioContent
-              title={"Modern Website"}
-              description={"Website adaptable to all devices, with ui components and animated interactions."}
+              title={"MBook"}
+              description={
+                "Personal mobile diary app for jotting thoughts, feelings, and moments. Features rich text entries, cards, and buttons. No animations. Designed for individuals seeking self-reflection and sharing. Capturing actions, thoughts, and moments fosters self-awareness, expression, and clarity. Developed with Flutter, Node, and Dart. An intuitive note-taking app enabling text, images, and video entries. A unique diary solution in the market."
+              }
             />
+
             <PortfolioContent
-              title={"Modern Website"}
+              title={"LuckySea"}
               description={"Website adaptable to all devices, with ui components and animated interactions."}
+              demoLink="https://dev.luckysea.gg/"
+            />
+
+            <PortfolioContent
+              title={"Greengrocer"}
+              description={"Website adaptable to all devices, with ui components and animated interactions."}
+              img={{ src: "/assets/img/greengrocer.webp", alt: "Greengrocer" }}
+            />
+
+            <PortfolioContent
+              title={"Unimidia"}
+              description={"Website adaptable to all devices, with ui components and animated interactions."}
+              demoLink="https://dev.unimidia.tv/"
+              img={{ src: "/assets/img/unimidia.png", alt: "Unimidia" }}
             />
           </Carousel>
         </div>

@@ -19,10 +19,17 @@ export function PortfolioContent({ demoLink, description, title, img }: Portfoli
       <div className="portfolio__data">
         <h3 className="portfolio__title">{title}</h3>
         <p className="portfolio__description">{description}</p>
-        <a href={demoLink ? demoLink : "#"} className="button button--flex button-small portfolio__button">
-          Demo
-          <TiArrowRight className="button__icon" />
-        </a>
+        {demoLink && (
+          <a
+            href={demoLink ? demoLink : "#"}
+            target="_blank"
+            rel="noreferrer"
+            className="button button--flex button-small portfolio__button"
+          >
+            Demo
+            <TiArrowRight className="button__icon" />
+          </a>
+        )}
       </div>
     </PortfolioContentStyled>
   );

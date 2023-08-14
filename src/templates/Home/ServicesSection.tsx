@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { BiCode } from "react-icons/bi";
 import { FaServer } from "react-icons/fa";
+import { FiSmartphone } from "react-icons/fi";
 import { TiArrowRight } from "react-icons/ti";
 import { ServicesModal } from "../../components/ServicesModal";
 import { ServiceContainer } from "./styles";
@@ -39,12 +40,10 @@ export function ServicesSection() {
                 callbackShowModal={setShowModal}
                 title="Frontend Development"
                 services={[
-                  "I develop the webpage interface.",
-                  "App development - Flutter/Dart.",
-                  "Backend connectivity.",
-                  "Frameworks - React and Next.js.",
-                  "Tailwind, styled-components, sass",
-                  "jQuery and Vanilla JS"
+                  "React.js.",
+                  "Next.js.",
+                  "Tailwind, styled-components, Radix, etc.",
+                  "jQuery and Vanilla JS."
                 ]}
               />
             )}
@@ -70,13 +69,7 @@ export function ServicesSection() {
                 isVisible={showModal.isVisible}
                 callbackShowModal={setShowModal}
                 title="Backend Development"
-                services={[
-                  "Backend with Node.js.",
-                  "AWS Serverless configurations.",
-                  "Express configurations.",
-                  "Typescript.",
-                  "NoSQL Database - DynamoDB."
-                ]}
+                services={["Backend with Node.js.", "AWS Serverless configurations.", "Database.", "IA.", "Bots."]}
               />
             )}
           </div>
@@ -84,31 +77,24 @@ export function ServicesSection() {
 
         <div className="services__content">
           <div>
-            <BiCode className="services__icon" />
+            <FiSmartphone className="services__icon" />
             <h3 className="services__title">
-              Frontend <br /> Development
+              Mobile <br /> Development
             </h3>
 
             <span
-              onClick={() => setShowModal({ isVisible: true, modalIndex: 0 })}
+              onClick={() => setShowModal({ isVisible: true, modalIndex: 3 })}
               className="button button--flex button--small button--link services__button"
             >
               View More <TiArrowRight className="button__icon" />
             </span>
 
-            {showModal.modalIndex === 0 && (
+            {showModal.modalIndex === 3 && (
               <ServicesModal
                 isVisible={showModal.isVisible}
                 callbackShowModal={setShowModal}
-                title="Frontend Development"
-                services={[
-                  "I develop the webpage interface.",
-                  "App development - Flutter/Dart.",
-                  "Backend connectivity.",
-                  "Frameworks - React and Next.js.",
-                  "Tailwind, styled-components, sass",
-                  "jQuery and Vanilla JS"
-                ]}
+                title="Mobile Development"
+                services={["Flutter/Dart.", "React Native.", "Tailwind, styled-components, etc."]}
               />
             )}
           </div>

@@ -16,7 +16,7 @@ export function ContactSection() {
 
               <div>
                 <h3 className="contact__title">Call Me</h3>
-                <span className="contact__subtitle">999-777-666</span>
+                <span className="contact__subtitle">+55 (11) 9 8949-0063</span>
               </div>
             </div>
 
@@ -54,27 +54,27 @@ export function ContactSection() {
                 </label>
                 <input type="email" className="contact__input" />
               </div>
+            </div>
 
-              <div className="contact__content">
-                <label htmlFor="" className="contact__label">
-                  Project
-                </label>
-                <input type="text" className="contact__input" />
-              </div>
+            <div className="contact__content">
+              <label htmlFor="" className="contact__label">
+                Project
+              </label>
+              <input type="text" className="contact__input" />
+            </div>
 
-              <div className="contact__content">
-                <label htmlFor="" className="contact__label">
-                  Message
-                </label>
-                <textarea name="" id="" cols={0} rows={7} className="contact__input"></textarea>
-              </div>
+            <div className="contact__content">
+              <label htmlFor="" className="contact__label">
+                Message
+              </label>
+              <textarea name="" id="" cols={0} rows={7} className="contact__input"></textarea>
+            </div>
 
-              <div>
-                <a href="#" className="button button--flex">
-                  Send Message
-                  <PiPaperPlaneRightBold className="button__icon" />
-                </a>
-              </div>
+            <div>
+              <a href="#" className="button button--flex">
+                Send Message
+                <PiPaperPlaneRightBold className="button__icon" />
+              </a>
             </div>
           </form>
         </div>

@@ -9,6 +9,7 @@ export function TestimonialSection() {
 
       <div className="testimonial__container container">
         <Carousel
+          buttons={false}
           breakpoints={{
             "(min-width: 568px)": {
               slides: {

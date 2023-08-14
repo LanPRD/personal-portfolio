@@ -33,7 +33,7 @@ export function Footer() {
           </ul>
 
           <div className="footer__socials">
-            <a href="#" target="_blank" className="footer__social">
+            <a href="https://www.instagram.com/allanprd/" target="_blank" className="footer__social">
               <FaInstagram />
             </a>
 
@@ -41,7 +41,7 @@ export function Footer() {
               <LuTwitter />
             </a>
 
-            <a href="#" target="_blank" className="footer__social">
+            <a href="https://www.linkedin.com/in/lanprd" target="_blank" className="footer__social">
               <FaLinkedinIn />
             </a>
           </div>

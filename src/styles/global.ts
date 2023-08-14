@@ -189,6 +189,7 @@ export default createGlobalStyle`
     padding: 1.6rem;
     border-radius: .4rem;
     font-weight: var(--font-medium);
+    cursor: pointer;
 
     &:hover {
       background-color: var(--first-color-alt);
@@ -312,11 +313,12 @@ export default createGlobalStyle`
     }
   }
 
-  /* @media (max-width: 1080px) {
-    font-size: 14px;
+  @media (min-width: 1024px) {
+    .header,
+    .main,
+    .footer__container {
+      padding: 0;
+    }
   }
 
-  @media (max-width: 720px) {
-    font-size: 12px;
-  } */
 `;

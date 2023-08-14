@@ -37,6 +37,12 @@ export const DotsContainer = styled.div`
   .dot.active {
     background: var(--first-color);
   }
+
+  @media screen and (min-width: 1024px) {
+    .dot {
+      margin-top: 5.6rem;
+    }
+  }
 `;
 
 export const ArrowSvg = styled.svg`
@@ -59,5 +65,15 @@ export const ArrowSvg = styled.svg`
 
   &.arrow--disabled {
     fill: rgba(255, 255, 255, 0.5);
+  }
+
+  @media screen and (min-width: 1024px) {
+    &.arrow--left {
+      left: -5.6rem;
+    }
+
+    &.arrow--right {
+      right: -5.6rem;
+    }
   }
 `;

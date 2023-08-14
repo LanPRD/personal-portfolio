@@ -50,7 +50,7 @@ export function SkillSection() {
 
           <div className="skills__list grid">
             <Skill name="Node.js" numberPercentage={85} />
-            <Skill name="AWS - Serverless Architecture" numberPercentage={55} />
+            <Skill name="AWS - Serverless Architecture" numberPercentage={80} />
           </div>
         </SkillContainer>
       </SkillWrapper>
