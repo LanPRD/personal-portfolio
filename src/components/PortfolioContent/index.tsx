@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { TiArrowRight } from "react-icons/ti";
 import { PortfolioContentStyled } from "./styles";
 
@@ -14,7 +15,7 @@ interface PortfolioContentProps {
 export function PortfolioContent({ demoLink, description, title, img }: PortfolioContentProps) {
   return (
     <PortfolioContentStyled className="grid">
-      <img src={img?.src} alt={img?.alt} className="portfolio__img" />
+      <Image src={img ? img.src : ""} alt={img?.alt} className="portfolio__img" />
 
       <div className="portfolio__data">
         <h3 className="portfolio__title">{title}</h3>

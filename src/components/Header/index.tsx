@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import Link from "next/link";
+import { useState } from "react";
 import { AiOutlineAppstore } from "react-icons/ai";
 import { BiBriefcase, BiFile, BiHomeAlt, BiMessageSquareDetail, BiUser } from "react-icons/bi";
 import { IoImageOutline } from "react-icons/io5";
@@ -19,9 +20,9 @@ export function Header() {
   return (
     <HeaderTag className="header" id="header">
       <NavTag className="container">
-        <a href="#" className="nav__logo">
+        <Link href="#" className="nav__logo">
           Allan
-        </a>
+        </Link>
 
         <div className={`nav__menu ${showMenu ? "show-menu" : ""}`} id="nav-menu">
           <ul className="nav__list grid">

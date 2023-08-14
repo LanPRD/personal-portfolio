@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { LuTwitter } from "react-icons/lu";
 import { FooterContainer } from "./styles";
@@ -14,26 +15,26 @@ export function Footer() {
 
           <ul className="footer__links">
             <li>
-              <a href="#services" className="footer__link">
+              <Link href="#services" className="footer__link">
                 Services
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a href="#portfolio" className="footer__link">
+              <Link href="#portfolio" className="footer__link">
                 Portfolio
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a href="#contact" className="footer__link">
+              <Link href="#contact" className="footer__link">
                 Contactme
-              </a>
+              </Link>
             </li>
           </ul>
 
           <div className="footer__socials">
-            <a href="https://www.instagram.com/allanprd/" target="_blank" className="footer__social">
+            <a href="https://www.instagram.com/allanprd/" target="_blank" className="footer__social" rel="noreferrer">
               <FaInstagram />
             </a>
 
@@ -41,7 +42,7 @@ export function Footer() {
               <LuTwitter />
             </a>
 
-            <a href="https://www.linkedin.com/in/lanprd" target="_blank" className="footer__social">
+            <a href="https://www.linkedin.com/in/lanprd" target="_blank" className="footer__social" rel="noreferrer">
               <FaLinkedinIn />
             </a>
           </div>

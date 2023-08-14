@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { LiTag } from "./styles";
 
 interface AnchorProps {
@@ -12,9 +13,9 @@ interface AnchorProps {
 export function Anchor({ setShowMenu, icon, text, href, className, activeLink }: AnchorProps) {
   return (
     <LiTag className={className}>
-      <a href={`#${href}`} className={`nav__link ${activeLink ? "active-link" : ""}`} onClick={() => setShowMenu()}>
+      <Link href={`#${href}`} className={`nav__link ${activeLink ? "active-link" : ""}`} onClick={() => setShowMenu()}>
         {icon} {text}
-      </a>
+      </Link>
     </LiTag>
   );
 }

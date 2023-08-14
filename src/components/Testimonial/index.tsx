@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { PiStarBold } from "react-icons/pi";
 import { TestimonialContainer } from "./styles";
 
@@ -13,7 +14,7 @@ export function Testimonial({ description, name, type }: TestimonialProps) {
       <div className="testimonial__content">
         <div className="testimonial__data">
           <div className="testimonial__header">
-            <img src="" alt="" className="testimonial__img" />
+            <Image src="" alt="" className="testimonial__img" />
 
             <div>
               <h3 className="testimonial__name">{name}</h3>

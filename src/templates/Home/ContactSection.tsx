@@ -25,7 +25,7 @@ export function ContactSection() {
 
               <div>
                 <h3 className="contact__title">Email</h3>
-                <span className="contact__subtitle">allanp.vba@gmail.com</span>
+                <span className="contact__subtitle">prdev.solutions@gmail.com</span>
               </div>
             </div>
 
