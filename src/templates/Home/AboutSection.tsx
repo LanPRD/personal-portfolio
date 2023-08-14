@@ -13,7 +13,7 @@ export function AboutSection() {
         <img src="" alt="" className="about__img" />
 
         <div className="about__data">
-          <p className="about__description">Type you description here</p>
+          <p className="about__description">Type your description here</p>
 
           <div className="about__info">
             <AboutInfo time={1} typeOftime="Years" text="experience" />

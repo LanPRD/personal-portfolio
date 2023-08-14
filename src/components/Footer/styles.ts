@@ -53,4 +53,10 @@ export const FooterContainer = styled.footer`
   .footer__social {
     color: #fff;
   }
+
+  @media screen and (min-width: 568px) {
+    .footer__container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
 `;

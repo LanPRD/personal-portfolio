@@ -16,6 +16,8 @@ export default createGlobalStyle`
     --input-color: hsl(var(--hue-color), 70%, 96%);
     --body-color: hsl(var(--hue-color), 60%, 99%);
     --container-color: #fff;
+    --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+    --scroll-thumb-color: hsl(var(--hue-color), 12%, 60%);
 
     --big-font-size: 3.2rem;
     --h1-font-size: 2.4rem;
@@ -49,6 +51,8 @@ export default createGlobalStyle`
     --input-color: hsl(var(--hue-color), 29%, 16%);
     --body-color: hsl(var(--hue-color), 28%, 12%);
     --container-color: hsl(var(--hue-color), 29%, 16%);
+    --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
+    --scroll-thumb-color: hsl(var(--hue-color), 12%, 86%);
   }
 
   * {
@@ -240,6 +244,21 @@ export default createGlobalStyle`
     transform: rotate(-180deg);
   }
 
+  ::-webkit-scrollbar {
+    width: 0.8rem;
+    background-color: var(--scroll-bar-color);
+    border-radius: 0.7rem;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-thumb-color);
+    border-radius: 0.7rem;
+
+    &:hover {
+      background-color: var(--first-color);
+    }
+  }
+
   @media screen and (min-width: 968px) {
     :root {
       --big-font-size: 4.8rem;
@@ -249,6 +268,21 @@ export default createGlobalStyle`
       --normal-font-size: 1.4rem;
       --small-font-size: 1.2rem;
       --smaller-font-size: 1rem;
+    }
+  }
+
+  @media screen and (max-width: 350px) {
+    .container {
+      margin-left: var(--mb-1) !important;
+      margin-right: var(--mb-1) !important;
+    }
+
+    .nav__menu {
+      padding: 2rem 0.25rem 4rem !important;
+    }
+
+    .nav__list {
+      column-gap: 0 !important;
     }
   }
 

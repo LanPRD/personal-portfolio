@@ -9,4 +9,15 @@ export const HomeImage = styled.div`
   .home__blob-img {
     width: 170px;
   }
+
+  @media screen and (max-width: 350px) {
+    .home__blob {
+      width: 180px;
+    }
+  }
+
+  @media screen and (min-width: 568px) {
+    order: 1;
+    justify-self: center;
+  }
 `;

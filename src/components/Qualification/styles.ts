@@ -36,4 +36,8 @@ export const QualificationData = styled.div`
     background-color: var(--first-color);
     transform: translate(6px, -7px);
   }
+
+  @media screen and (max-width: 350px) {
+    gap: 1.4rem;
+  }
 `;

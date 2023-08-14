@@ -8,6 +8,18 @@ export const HomeContainer = styled.div`
     padding-top: 5.6rem;
     align-items: center;
   }
+
+  @media screen and (max-width: 350px) {
+    .home__content {
+      grid-template-columns: 0.25fr 3fr;
+    }
+  }
+
+  @media screen and (min-width: 568px) {
+    .home__content {
+      grid-template-columns: max-content 1fr 1fr;
+    }
+  }
 `;
 
 export const HomeScroll = styled.div`
@@ -61,6 +73,10 @@ export const HomeData = styled.div`
     margin-left: var(--mb-0-5);
     transition: 0.3s;
   }
+
+  @media screen and (min-width: 568px) {
+    grid-column: initial;
+  }
 `;
 
 export const AboutContainer = styled.div`
@@ -94,6 +110,16 @@ export const AboutContainer = styled.div`
 
     display: flex;
     justify-content: center;
+  }
+
+  @media screen and (min-width: 568px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+`;
+
+export const SkillWrapper = styled.div`
+  @media screen and (min-width: 568px) {
+    grid-template-columns: repeat(2, 1fr);
   }
 `;
 
@@ -135,6 +161,12 @@ export const SkillContainer = styled.div`
     row-gap: 2.4rem;
     padding-left: 4rem;
   }
+
+  @media screen and (max-width: 350px) {
+    .skills__title {
+      font-size: var(--normal-font-size);
+    }
+  }
 `;
 
 export const QualificationContainer = styled.div`
@@ -164,11 +196,22 @@ export const QualificationContainer = styled.div`
   }
 
   .qualification__active {
-    display: block;
   }
 
   .qualification__button.qualification__active {
     color: var(--first-color);
+  }
+
+  .qualification__sections {
+    margin-top: var(--mb-3);
+  }
+
+  @media screen and (min-width: 568px) {
+    .qualification__sections {
+      display: grid;
+      grid-template-columns: 0.6fr;
+      justify-content: center;
+    }
   }
 `;
 
@@ -214,6 +257,15 @@ export const ServiceContainer = styled.div`
       transform: translateX(0.4rem);
     }
   }
+
+  @media screen and (max-width: 350px) {
+    grid-template-columns: max-content;
+    justify-content: center;
+
+    .services__content {
+      padding-right: 4.5rem;
+    }
+  }
 `;
 
 export const PortfolioContainer = styled.div`
@@ -247,6 +299,18 @@ export const ProjectSectionContainer = styled.div`
   .project__img {
     width: 232px;
     justify-self: center;
+  }
+
+  @media screen and (max-width: 350px) {
+    .project__img {
+      width: 200px;
+    }
+  }
+
+  @media screen and (min-width: 568px) {
+    .project__container {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 `;
 
@@ -297,5 +361,11 @@ export const ContactSectionContainer = styled.div`
     border: none;
     outline: none;
     padding: 0.25rem 0.5rem 0.5rem 0;
+  }
+
+  @media screen and (min-width: 568px) {
+    .contact__container {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 `;

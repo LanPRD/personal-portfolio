@@ -5,10 +5,11 @@ import { ArrowSvg, CarouselContainer, DotsContainer } from "./styles";
 
 interface CarouselProps {
   buttons?: boolean;
+  breakpoints?: any;
   children: React.ReactNode;
 }
 
-export function Carousel({ buttons = true, children }: CarouselProps) {
+export function Carousel({ buttons = true, breakpoints, children }: CarouselProps) {
   const [loaded, setLoaded] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
@@ -17,13 +18,7 @@ export function Carousel({ buttons = true, children }: CarouselProps) {
     slides: {
       spacing: 48
     },
-    breakpoints: {
-      "(min-width: 568px)": {
-        slides: {
-          perView: 2
-        }
-      }
-    },
+    breakpoints: breakpoints,
     created(slider) {
       let timeout: ReturnType<typeof setTimeout>;
       let mouseOver = false;

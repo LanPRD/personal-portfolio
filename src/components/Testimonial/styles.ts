@@ -35,4 +35,22 @@ export const TestimonialContainer = styled.div`
   .testimonial__icon-start {
     color: var(--first-color);
   }
+
+  @media screen and (max-width: 350px) {
+    .testimonial__data,
+    .testimonial__header {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .testimonial__img {
+      margin-right: 0;
+      margin-bottom: var(--mb-0-25);
+    }
+
+    .testimonial__data,
+    .testimonial__description {
+      text-align: center;
+    }
+  }
 `;

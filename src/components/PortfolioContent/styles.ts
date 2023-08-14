@@ -25,4 +25,8 @@ export const PortfolioContentStyled = styled.div`
   .portfolio__button:hover .button__icon {
     transform: translateX(0.25rem);
   }
+
+  @media screen and (min-width: 568px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 `;

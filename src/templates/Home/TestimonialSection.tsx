@@ -8,7 +8,15 @@ export function TestimonialSection() {
       <span className="section__subtitle">My client saying</span>
 
       <div className="testimonial__container container">
-        <Carousel>
+        <Carousel
+          breakpoints={{
+            "(min-width: 568px)": {
+              slides: {
+                perView: 2
+              }
+            }
+          }}
+        >
           <Testimonial
             name={"Sara Smith"}
             type={"Client"}

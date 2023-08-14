@@ -30,6 +30,10 @@ export const ModalContainer = styled.div<ModalContainerProps>`
   padding: 0 1.6rem;
   z-index: var(--z-modal);
 
+  @media screen and (max-width: 350px) {
+    padding: 0 0.8rem;
+  }
+
   ${props =>
     props.isVisible
       ? css`
