@@ -14,7 +14,7 @@ export function HomeSection() {
           <Blob />
 
           <HomeData>
-            <h1 className="home__title">Hi, I&apos;am Allan Prado</h1>
+            <h1 className="home__title">Hi, I&apos;m Allan</h1>
             <h3 className="home__subtitle">Fullstack developer</h3>
             <p className="home__description">
               This is a description This is a description This is a description This is a description This is a

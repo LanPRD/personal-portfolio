@@ -20,10 +20,20 @@ export const HomeContainer = styled.div`
       grid-template-columns: max-content 1fr 1fr;
     }
   }
+
+  @media screen and (min-width: 768px) {
+    row-gap: 8rem;
+
+    .home__content {
+      padding-top: 6.4rem;
+      column-gap: 3.2rem;
+    }
+  }
 `;
 
 export const HomeScroll = styled.div`
   display: none;
+  margin-top: 10.4rem;
 
   .home__scroll-button {
     color: var(--first-color);
@@ -47,6 +57,14 @@ export const HomeScroll = styled.div`
 
   .home__scroll-name {
     font-size: 2rem;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: block;
+
+    .home__scroll-button {
+      margin-left: 4.8rem;
+    }
   }
 `;
 
@@ -93,16 +111,10 @@ export const AboutContainer = styled.div`
   }
 
   .about__info {
-    display: flex;
-    justify-content: space-evenly;
-
-    @media screen and (max-width: 768px) {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      margin-bottom: var(--mb-2-5);
-
-      row-gap: 0.4rem;
-    }
+    margin-bottom: var(--mb-2-5);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 0.4rem;
   }
 
   .about__buttons {
@@ -114,6 +126,26 @@ export const AboutContainer = styled.div`
 
   @media screen and (min-width: 568px) {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (min-width: 768px) {
+    column-gap: 8rem;
+
+    .about__img {
+      width: 350px;
+    }
+
+    .about__description {
+      text-align: initial;
+    }
+
+    .about__info {
+      justify-content: space-between;
+    }
+
+    .about__buttons {
+      justify-content: initial;
+    }
   }
 `;
 
@@ -213,6 +245,20 @@ export const QualificationContainer = styled.div`
       justify-content: center;
     }
   }
+
+  @media screen and (min-width: 768px) {
+    .qualification__tabs {
+      justify-content: center;
+    }
+
+    .qualification__button {
+      margin: 0 var(--mb-1);
+    }
+
+    .qualification__sections {
+      grid-template-columns: 0.5fr;
+    }
+  }
 `;
 
 export const ServiceContainer = styled.div`
@@ -266,6 +312,19 @@ export const ServiceContainer = styled.div`
       padding-right: 4.5rem;
     }
   }
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(3, 218px);
+    justify-content: center;
+
+    .services__icon {
+      font-size: 3.2rem;
+    }
+
+    .services__content {
+      /* padding: 9.6rem 0 3.2rem 2.4rem; */
+    }
+  }
 `;
 
 export const PortfolioContainer = styled.div`
@@ -310,6 +369,26 @@ export const ProjectSectionContainer = styled.div`
   @media screen and (min-width: 568px) {
     .project__container {
       grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    text-align: initial;
+
+    .project__bg {
+      background: none;
+    }
+
+    .project__container {
+      background-color: var(--first-color-second);
+      border-radius: 1.6rem;
+      padding: 4.8rem 4rem 0;
+      grid-template-columns: 1fr max-content;
+      column-gap: 4.8rem;
+    }
+
+    .project__data {
+      padding-top: 1.2rem;
     }
   }
 `;

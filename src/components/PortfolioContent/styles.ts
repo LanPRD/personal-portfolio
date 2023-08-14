@@ -29,4 +29,14 @@ export const PortfolioContentStyled = styled.div`
   @media screen and (min-width: 568px) {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  @media screen and (min-width: 768px) {
+    .portfolio__img {
+      width: 320px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    align-items: center;
+  }
 `;

@@ -17,7 +17,7 @@ export function Header() {
   const [showMenu, setShowMenu] = useState<boolean>(false);
 
   return (
-    <HeaderTag id="header">
+    <HeaderTag className="header" id="header">
       <NavTag className="container">
         <a href="#" className="nav__logo">
           Allan
@@ -29,7 +29,7 @@ export function Header() {
               activeLink={true}
               className="nav__item"
               href="home"
-              icon={<BiHomeAlt />}
+              icon={<BiHomeAlt className="nav__icon" />}
               text="Home"
               setShowMenu={() => setShowMenu(false)}
             />
@@ -37,7 +37,7 @@ export function Header() {
             <Anchor
               className="nav__item"
               href="about"
-              icon={<BiUser />}
+              icon={<BiUser className="nav__icon" />}
               text="About"
               setShowMenu={() => setShowMenu(false)}
             />
@@ -45,7 +45,7 @@ export function Header() {
             <Anchor
               className="nav__item"
               href="skills"
-              icon={<BiFile />}
+              icon={<BiFile className="nav__icon" />}
               text="Skills"
               setShowMenu={() => setShowMenu(false)}
             />
@@ -53,7 +53,7 @@ export function Header() {
             <Anchor
               className="nav__item"
               href="services"
-              icon={<BiBriefcase />}
+              icon={<BiBriefcase className="nav__icon" />}
               text="Services"
               setShowMenu={() => setShowMenu(false)}
             />
@@ -61,7 +61,7 @@ export function Header() {
             <Anchor
               className="nav__item"
               href="portfolio"
-              icon={<IoImageOutline />}
+              icon={<IoImageOutline className="nav__icon" />}
               text="Portfolio"
               setShowMenu={() => setShowMenu(false)}
             />
@@ -69,7 +69,7 @@ export function Header() {
             <Anchor
               className="nav__item"
               href="#contact"
-              icon={<BiMessageSquareDetail />}
+              icon={<BiMessageSquareDetail className="nav__icon" />}
               text="Contact me"
               setShowMenu={() => setShowMenu(false)}
             />

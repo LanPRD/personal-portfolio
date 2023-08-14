@@ -97,10 +97,11 @@ export default function Home() {
         <ProjectSection />
         <TestimonialSection />
         <ContactSection />
-        <Footer />
 
         <ScrollUp />
       </main>
+
+      <Footer />
     </>
   );
 }

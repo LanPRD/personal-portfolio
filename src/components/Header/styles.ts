@@ -7,6 +7,11 @@ export const HeaderTag = styled.header`
   left: 0;
   z-index: var(--z-fixed);
   background-color: var(--body-color);
+
+  @media screen and (min-width: 768px) {
+    top: 0;
+    bottom: initial;
+  }
 `;
 
 export const NavTag = styled.nav`
@@ -15,6 +20,30 @@ export const NavTag = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media screen and (min-width: 768px) {
+    height: calc(var(--header-height) + 2.4rem);
+    column-gap: 1.6rem;
+
+    .nav__icon,
+    .nav__close,
+    .nav__toggle {
+      display: none;
+    }
+
+    .nav__list {
+      display: flex;
+      column-gap: 3.2rem;
+    }
+
+    .nav__menu {
+      margin-left: auto;
+    }
+
+    .change-theme {
+      margin: 0;
+    }
+  }
 
   .nav__logo,
   .nav__toggle {

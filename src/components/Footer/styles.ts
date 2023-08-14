@@ -59,4 +59,27 @@ export const FooterContainer = styled.footer`
       grid-template-columns: repeat(2, 1fr);
     }
   }
+
+  @media screen and (min-width: 568px) {
+    .footer__container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .footer__bg {
+      padding: 4.8rem 0 5.6rem;
+    }
+
+    .footer__links {
+      flex-direction: row;
+      column-gap: 3.2rem;
+    }
+
+    .footer__socials {
+      justify-self: flex-end;
+    }
+
+    .footer__copy {
+      margin-top: 7.2rem;
+    }
+  }
 `;

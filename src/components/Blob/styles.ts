@@ -20,4 +20,10 @@ export const HomeImage = styled.div`
     order: 1;
     justify-self: center;
   }
+
+  @media screen and (min-width: 768px) {
+    .home__blob {
+      width: 270px;
+    }
+  }
 `;

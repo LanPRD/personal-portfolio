@@ -34,6 +34,12 @@ export const ModalContainer = styled.div<ModalContainerProps>`
     padding: 0 0.8rem;
   }
 
+  @media screen and (min-width: 768px) {
+    .services__modal-content {
+      width: 450px;
+    }
+  }
+
   ${props =>
     props.isVisible
       ? css`

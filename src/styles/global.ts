@@ -286,6 +286,32 @@ export default createGlobalStyle`
     }
   }
 
+
+  @media screen and (min-width: 768px) {
+    .container {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    .section {
+      padding: 6rem 0 4rem;
+    }
+
+    .section__subtitle {
+      margin-bottom: 6.4rem;
+    }
+
+    .header,
+    .main,
+    .footer__container {
+      padding: 0 1.6rem;
+    }
+  }
+
   /* @media (max-width: 1080px) {
     font-size: 14px;
   }

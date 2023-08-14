@@ -81,6 +81,38 @@ export function ServicesSection() {
             )}
           </div>
         </div>
+
+        <div className="services__content">
+          <div>
+            <BiCode className="services__icon" />
+            <h3 className="services__title">
+              Frontend <br /> Development
+            </h3>
+
+            <span
+              onClick={() => setShowModal({ isVisible: true, modalIndex: 0 })}
+              className="button button--flex button--small button--link services__button"
+            >
+              View More <TiArrowRight className="button__icon" />
+            </span>
+
+            {showModal.modalIndex === 0 && (
+              <ServicesModal
+                isVisible={showModal.isVisible}
+                callbackShowModal={setShowModal}
+                title="Frontend Development"
+                services={[
+                  "I develop the webpage interface.",
+                  "App development - Flutter/Dart.",
+                  "Backend connectivity.",
+                  "Frameworks - React and Next.js.",
+                  "Tailwind, styled-components, sass",
+                  "jQuery and Vanilla JS"
+                ]}
+              />
+            )}
+          </div>
+        </div>
       </ServiceContainer>
     </section>
   );
