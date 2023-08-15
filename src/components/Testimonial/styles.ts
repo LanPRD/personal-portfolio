@@ -11,11 +11,19 @@ export const TestimonialContainer = styled.div`
     margin-bottom: var(--mb-1);
   }
 
-  .testimonial__img {
+  div.testimonial__img {
     width: 60px;
     height: 60px;
     border-radius: 50%;
+    overflow: hidden;
+    position: relative;
     margin-right: var(--mb-0-75);
+  }
+
+  img.testimonial__img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
   }
 
   .testimonial__name {

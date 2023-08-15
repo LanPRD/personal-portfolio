@@ -67,7 +67,14 @@ export function ContactSection() {
               <label htmlFor="" className="contact__label">
                 Message
               </label>
-              <textarea name="" id="" cols={0} rows={7} className="contact__input"></textarea>
+              <textarea
+                name=""
+                id=""
+                cols={0}
+                rows={7}
+                className="contact__input"
+                style={{ resize: "none" }}
+              ></textarea>
             </div>
 
             <div>

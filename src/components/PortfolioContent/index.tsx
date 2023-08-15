@@ -15,7 +15,30 @@ interface PortfolioContentProps {
 export function PortfolioContent({ demoLink, description, title, img }: PortfolioContentProps) {
   return (
     <PortfolioContentStyled className="grid">
-      <Image src={img ? img.src : ""} alt={img ? img.alt : ""} className="portfolio__img" />
+      <div
+        style={{
+          position: "relative",
+          height: "208px",
+          overflow: "hidden",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center"
+        }}
+        className="portfolio__img"
+      >
+        {img && (
+          <Image
+            src={img.src}
+            alt={img.alt}
+            className="portfolio__img"
+            style={{
+              objectFit: "cover"
+            }}
+            width={320}
+            height={208}
+          />
+        )}
+      </div>
 
       <div className="portfolio__data">
         <h3 className="portfolio__title">{title}</h3>

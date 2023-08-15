@@ -1,21 +1,16 @@
-import Link from "next/link";
-import { SiGithub, SiInstagram, SiLinkedin } from "react-icons/si";
+import { SiGithub, SiLinkedin } from "react-icons/si";
 import { SocialDiv } from "./styles";
 
 export function Social() {
   return (
     <SocialDiv>
-      <Link href="https://www.linkedin.com/in/lanprd">
-        <a target="_blank" className="home__social-icon">
-          <SiLinkedin />
-        </a>
-      </Link>
+      <a href="https://www.linkedin.com/in/lanprd" target="_blank" className="home__social-icon" rel="noreferrer">
+        <SiLinkedin />
+      </a>
 
-      <Link href="https://github.com/LanPRD">
-        <a target="_blank" className="home__social-icon">
-          <SiGithub />
-        </a>
-      </Link>
+      <a href="https://github.com/LanPRD" target="_blank" className="home__social-icon" rel="noreferrer">
+        <SiGithub />
+      </a>
     </SocialDiv>
   );
 }

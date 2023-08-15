@@ -69,7 +69,7 @@ export function Header() {
 
             <Anchor
               className="nav__item"
-              href="#contact"
+              href="contact"
               icon={<BiMessageSquareDetail className="nav__icon" />}
               text="Contact me"
               setShowMenu={() => setShowMenu(false)}

@@ -5,16 +5,20 @@ import { TestimonialContainer } from "./styles";
 interface TestimonialProps {
   name: string;
   type: string;
+  src: string;
+  alt: string;
   description: string;
 }
 
-export function Testimonial({ description, name, type }: TestimonialProps) {
+export function Testimonial({ description, name, type, src, alt }: TestimonialProps) {
   return (
     <TestimonialContainer>
       <div className="testimonial__content">
         <div className="testimonial__data">
           <div className="testimonial__header">
-            <Image src="" alt="" className="testimonial__img" />
+            <div className="testimonial__img">
+              <Image src={src} alt={alt} className="testimonial__img" width={120} height={120} />
+            </div>
 
             <div>
               <h3 className="testimonial__name">{name}</h3>

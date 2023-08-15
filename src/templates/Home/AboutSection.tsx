@@ -11,7 +11,15 @@ export function AboutSection() {
 
       <AboutContainer className="container grid">
         {/* TODO Me */}
-        <Image src="/assets/img/aboutme.jpg" alt="Allan Prado" className="about__img" />
+        <div className="about__img">
+          <Image
+            src="/assets/img/aboutme.jpg"
+            alt="Picture of the author Allan Prado"
+            width={265}
+            height={200}
+            className="about__img"
+          />
+        </div>
 
         <div className="about__data">
           <p className="about__description">

@@ -24,6 +24,8 @@ export function TestimonialSection() {
             description={
               "I get a good impression, I carry out my project with all the possible quality and attention and support 24 hours a day."
             }
+            src="/assets/img/me.jpg"
+            alt="Client profile image"
           />
 
           <Testimonial
@@ -32,6 +34,8 @@ export function TestimonialSection() {
             description={
               "I get a good impression, I carry out my project with all the possible quality and attention and support 24 hours a day."
             }
+            src="/assets/img/me.jpg"
+            alt="Client profile image"
           />
 
           <Testimonial
@@ -40,6 +44,8 @@ export function TestimonialSection() {
             description={
               "I get a good impression, I carry out my project with all the possible quality and attention and support 24 hours a day."
             }
+            src="/assets/img/me.jpg"
+            alt="Client profile image"
           />
         </Carousel>
       </div>

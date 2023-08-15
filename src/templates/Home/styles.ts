@@ -376,6 +376,12 @@ export const ProjectSectionContainer = styled.div`
     }
   }
 
+  @media screen and (max-width: 768px) {
+    .project__data {
+      padding-bottom: 3rem;
+    }
+  }
+
   @media screen and (min-width: 768px) {
     text-align: initial;
 
@@ -392,7 +398,7 @@ export const ProjectSectionContainer = styled.div`
     }
 
     .project__data {
-      padding-top: 1.2rem;
+      /* padding-top: 1.2rem; */
     }
   }
 `;

@@ -82,7 +82,7 @@ export function Carousel({ buttons = true, breakpoints, children }: CarouselProp
         )}
       </CarouselContainer>
 
-      {loaded && instanceRef.current && (
+      {loaded && instanceRef.current && childrenArray.length && (
         <Dots
           sliders={[...Array(instanceRef.current?.track.details.slides.length).keys()]}
           instanceRef={instanceRef.current}
