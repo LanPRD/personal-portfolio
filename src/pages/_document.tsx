@@ -34,16 +34,15 @@ export default class MyDocument extends Document {
           />
 
           <meta name="author" content="Allan Prado" />
-
-          <meta property="description" content="Allan Prado - CEO portfolio of pr.dev" />
+          <meta property="description" content="Allan Prado - CEO of prdev portfolio" />
 
           <meta property="twitter:title" content="Portfolio | Allan Prado"></meta>
-          <meta property="twitter:description" content="Portfolio Allan Prado"></meta>
+          <meta property="twitter:description" content="Allan Prado - CEO of prdev portfolio"></meta>
           <meta property="twitter:image" content="/assets/img/aboutme.jpg"></meta>
           <meta property="twitter:card" content="summary_large_image"></meta>
 
           <meta property="og:title" content="Portfolio | Allan Prado"></meta>
-          <meta property="og:description" content="Portfolio Allan Prado" />
+          <meta property="og:description" content="Allan Prado - CEO of prdev portfolio" />
           <meta property="og:image" content="/assets/img/aboutme.jpg"></meta>
           <meta property="og:url" content="https://portfolio.prdev.com.br/"></meta>
         </Head>
