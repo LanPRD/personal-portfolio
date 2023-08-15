@@ -37,12 +37,12 @@ export default class MyDocument extends Document {
 
           <meta property="twitter:title" content="Portfolio | Allan Prado"></meta>
           <meta property="twitter:description" content="Portfolio Allan Prado"></meta>
-          {/* <meta property="twitter:image" content="Twitter link preview image URL"></meta> */}
+          <meta property="twitter:image" content="/assets/img/aboutme.jpg"></meta>
           <meta property="twitter:card" content="summary_large_image"></meta>
 
           <meta property="og:title" content="Portfolio | Allan Prado"></meta>
           <meta property="og:description" content="Portfolio Allan Prado" />
-          {/* <meta property="og:image" content="Link preview image URL"></meta> */}
+          <meta property="og:image" content="/assets/img/aboutme.jpg"></meta>
           <meta property="og:url" content="https://portfolio.prdev.com.br/"></meta>
         </Head>
 
