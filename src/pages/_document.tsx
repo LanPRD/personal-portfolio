@@ -33,7 +33,9 @@ export default class MyDocument extends Document {
             rel="stylesheet"
           />
 
-          <meta property="description" content="Search engine description" />
+          <meta name="author" content="Allan Prado" />
+
+          <meta property="description" content="Allan Prado - CEO portfolio of pr.dev" />
 
           <meta property="twitter:title" content="Portfolio | Allan Prado"></meta>
           <meta property="twitter:description" content="Portfolio Allan Prado"></meta>
