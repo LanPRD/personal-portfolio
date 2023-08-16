@@ -25,6 +25,16 @@ export function Header() {
           Allan
         </Link>
 
+        <div>
+          <Link href="/" className="nav__logo" locale="pt" scroll={false}>
+            pt
+          </Link>
+          -
+          <Link href="/" className="nav__logo" locale="en" scroll={false}>
+            en
+          </Link>
+        </div>
+
         <div className={`nav__menu ${showMenu ? "show-menu" : ""}`} id="nav-menu">
           <ul className="nav__list grid">
             <Anchor
