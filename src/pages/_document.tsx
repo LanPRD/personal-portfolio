@@ -43,8 +43,6 @@ export default class MyDocument extends Document {
             content="desenvolvedor de software, programador de aplicativos, desenvolvimento de aplicativos móveis, desenvolvimento de aplicativos web, programação de sistemas, engenheiro de software, linguagens de programação, arquitetura de software, interface de usuário, experiência do usuário, desenvolvimento front-end, desenvolvimento back-end, codificação, soluções de software, inovação tecnológica, consultoria em software"
           />
 
-          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
           <meta name="robots" content="index, follow" />
 
           <meta property="twitter:title" content="Portfolio | Allan Prado" />

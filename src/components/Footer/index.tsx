@@ -1,9 +1,12 @@
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { LuTwitter } from "react-icons/lu";
 import { FooterContainer } from "./styles";
 
 export function Footer() {
+  const t = useTranslations("footer");
+
   return (
     <FooterContainer>
       <div className="footer__bg">
@@ -16,19 +19,19 @@ export function Footer() {
           <ul className="footer__links">
             <li>
               <Link href="#services" className="footer__link">
-                Services
+                {t("services")}
               </Link>
             </li>
 
             <li>
               <Link href="#portfolio" className="footer__link">
-                Portfolio
+                {t("portfolio")}
               </Link>
             </li>
 
             <li>
               <Link href="#contact" className="footer__link">
-                Contactme
+                {t("contactme")}
               </Link>
             </li>
           </ul>
@@ -48,7 +51,7 @@ export function Footer() {
           </div>
         </div>
 
-        <p className="footer__copy">&#169; pr.dev. All right reserved</p>
+        <p className="footer__copy">&#169; {t("copy")}</p>
       </div>
     </FooterContainer>
   );

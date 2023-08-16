@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { useState } from "react";
 import { AiOutlineAppstore } from "react-icons/ai";
@@ -13,8 +14,8 @@ import { Anchor } from "../Anchor";
 import { HeaderTag, NavTag } from "./styles";
 
 export function Header() {
+  const t = useTranslations("header");
   const { theme, toggleTheme } = useTheme();
-
   const [showMenu, setShowMenu] = useState<boolean>(false);
 
   return (
@@ -31,7 +32,7 @@ export function Header() {
               className="nav__item"
               href="home"
               icon={<BiHomeAlt className="nav__icon" />}
-              text="Home"
+              text={t("home")}
               setShowMenu={() => setShowMenu(false)}
             />
 
@@ -39,7 +40,7 @@ export function Header() {
               className="nav__item"
               href="about"
               icon={<BiUser className="nav__icon" />}
-              text="About"
+              text={t("about")}
               setShowMenu={() => setShowMenu(false)}
             />
 
@@ -47,7 +48,7 @@ export function Header() {
               className="nav__item"
               href="skills"
               icon={<BiFile className="nav__icon" />}
-              text="Skills"
+              text={t("skills")}
               setShowMenu={() => setShowMenu(false)}
             />
 
@@ -55,7 +56,7 @@ export function Header() {
               className="nav__item"
               href="services"
               icon={<BiBriefcase className="nav__icon" />}
-              text="Services"
+              text={t("services")}
               setShowMenu={() => setShowMenu(false)}
             />
 
@@ -63,7 +64,7 @@ export function Header() {
               className="nav__item"
               href="portfolio"
               icon={<IoImageOutline className="nav__icon" />}
-              text="Portfolio"
+              text={t("portfolio")}
               setShowMenu={() => setShowMenu(false)}
             />
 
@@ -71,7 +72,7 @@ export function Header() {
               className="nav__item"
               href="contact"
               icon={<BiMessageSquareDetail className="nav__icon" />}
-              text="Contact me"
+              text={t("contact")}
               setShowMenu={() => setShowMenu(false)}
             />
           </ul>

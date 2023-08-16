@@ -1,3 +1,4 @@
+import { GetStaticPropsContext } from "next";
 import Head from "next/head";
 import { useEffect } from "react";
 
@@ -104,4 +105,12 @@ export default function Home() {
       <Footer />
     </>
   );
+}
+
+export async function getStaticProps({ locale }: GetStaticPropsContext) {
+  return {
+    props: {
+      messages: (await import(`../lang/${locale}.json`)).default
+    }
+  };
 }

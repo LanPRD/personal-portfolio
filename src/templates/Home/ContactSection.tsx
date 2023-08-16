@@ -1,13 +1,16 @@
+import { useTranslations } from "next-intl";
 import { MdOutlineEmail } from "react-icons/md";
 import { PiMapPinBold, PiPaperPlaneRightBold, PiPhone } from "react-icons/pi";
 import { ContactSectionContainer } from "./styles";
 
 export function ContactSection() {
+  const t = useTranslations("contact");
+
   return (
     <ContactSectionContainer>
       <section className="contact section" id="contact">
-        <h2 className="section__title">Contact me</h2>
-        <span className="section__subtitle">Get in touch</span>
+        <h2 className="section__title">{t("title")}</h2>
+        <span className="section__subtitle">{t("subtitle")}</span>
 
         <div className="contact__container container grid">
           <div>
@@ -15,7 +18,7 @@ export function ContactSection() {
               <PiPhone className="contact__icon" />
 
               <div>
-                <h3 className="contact__title">Call Me</h3>
+                <h3 className="contact__title">{t("call")}</h3>
                 <span className="contact__subtitle">+55 (11) 9 8949-0063</span>
               </div>
             </div>
@@ -33,7 +36,7 @@ export function ContactSection() {
               <PiMapPinBold className="contact__icon" />
 
               <div>
-                <h3 className="contact__title">Location</h3>
+                <h3 className="contact__title">{t("location")}</h3>
                 <span className="contact__subtitle">Campinas - SP, Brazil</span>
               </div>
             </div>
@@ -43,7 +46,7 @@ export function ContactSection() {
             <div className="contact__inputs grid">
               <div className="contact__content">
                 <label htmlFor="" className="contact__label">
-                  Name
+                  {t("name")}
                 </label>
                 <input type="text" className="contact__input" />
               </div>
@@ -58,14 +61,14 @@ export function ContactSection() {
 
             <div className="contact__content">
               <label htmlFor="" className="contact__label">
-                Project
+                {t("project")}
               </label>
               <input type="text" className="contact__input" />
             </div>
 
             <div className="contact__content">
               <label htmlFor="" className="contact__label">
-                Message
+                {t("message")}
               </label>
               <textarea
                 name=""
@@ -79,7 +82,7 @@ export function ContactSection() {
 
             <div>
               <a href="#" className="button button--flex">
-                Send Message
+                {t("sendMessage")}
                 <PiPaperPlaneRightBold className="button__icon" />
               </a>
             </div>

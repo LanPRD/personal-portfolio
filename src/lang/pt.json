@@ -1,0 +1,65 @@
+{
+  "header": {
+    "home": "Início",
+    "about": "Sobre",
+    "skills": "Habilidades",
+    "services": "Serviços",
+    "portfolio": "Portfólio",
+    "contact": "Entre em contato"
+  },
+  "home": {
+    "title": "Oi, eu sou o Allan",
+    "description": "Desenvolvedor web com forte expertise e paixão por transformar código em soluções funcionais. Especializado em tecnologias web e dedicado a criar experiências digitais excepcionais.",
+    "scroll": "Role para baixo"
+  },
+  "about": {
+    "title": "Sobre Mim",
+    "subtitle": "Minha introdução",
+    "description": "Desenvolvedor de software apaixonado por criar soluções que impactam a vida das pessoas. Com experiência em blockchain e web convencional, minha jornada inclui 4 anos de trabalho voluntário, liderança de equipes e transformação de ideias em realidade. Especializado em HTML, CSS, JS, React, Next, Node, Flutter, Dart, AWS Serverless e TypeScript, sou um desenvolvedor fullstack autodidata, dedicado e persistente. Minha atenção meticulosa aos detalhes impulsiona a qualidade de cada projeto, pois acredito que até o menor aspecto faz diferença no resultado final. Meu objetivo é criar aplicativos memoráveis que enriqueçam a vida das pessoas. Além do mundo da programação, meu tempo é dividido entre jogos, animes, viagens, trilhas, natureza e grafite. Estou ansioso para enfrentar novos desafios e continuar crescendo como profissional."
+  },
+  "skill": {
+    "title": "Habilidades",
+    "subtitle": "Meu nível técnico",
+    "morethan": "Mais de 1 ano"
+  },
+  "qualification": {
+    "title": "Qualificações",
+    "subtitle": "Minha jornada pessoal",
+    "work": "Experiência Profissional",
+    "education": "Educação"
+  },
+  "services": {
+    "title": "Serviços",
+    "subtitle": "O que ofereço",
+    "more": "Ver Mais"
+  },
+  "portfolio": {
+    "title": "Portfólio",
+    "subtitle": "Trabalhos mais recentes",
+    "mbook": "Aplicativo de diário pessoal para anotar pensamentos, sentimentos e momentos. Possui entradas em texto rico, cartões e botões. Sem animações. Projetado para indivíduos em busca de auto reflexão e compartilhamento. Capturar ações, pensamentos e momentos promove autoconsciência, expressão e clareza. Desenvolvido com Flutter, Node e Dart. Um intuitivo aplicativo de anotações permitindo entradas de texto, imagens e vídeo. Uma solução de diário única no mercado.",
+    "luckysea": "Desenvolvi uma NFT lootbox responsiva para desktop e web app, com roletas originais, cartões e ilustrações. Tecnologias como ReactJS, TypeScript, ethers.js e web3 foram utilizadas. Conexão direta com a blockchain.",
+    "greengrocer": "Desenvolvi um aplicativo de e-commerce para Android e iOS, focado em vegetais, verduras, frutas e mais. Oferece conveniência para compras online, apresentando botões, cartões de produtos e listas de compras. Construído com Flutter/Dart, exibe cartões, carregamentos e transições de tela.",
+    "unimidia": "Criei um menu digital responsivo para desktop, mobile e aplicativo Android. Possui painéis, controle de TV e cartões de informações. Destinado a empresas que desejam aumentar as vendas ao promover produtos. Construído com ReactJS, TypeScript, styled-components e Radix. Implementação futura de marketplace planejada."
+  },
+  "project": {
+    "title": "Você tem um novo projeto",
+    "description": "Entre em contato agora e ganhe 30% de desconto no seu novo projeto.",
+    "contact": "Entre em Contato"
+  },
+  "contact": {
+    "title": "Entre em Contato",
+    "subtitle": "Fale comigo",
+    "call": "Me Ligue",
+    "location": "Localização",
+    "name": "Nome",
+    "project": "Projeto",
+    "message": "Mensagem",
+    "sendMessage": "Enviar Mensagem"
+  },
+  "footer": {
+    "services": "Serviços",
+    "portfolio": "Portfólio",
+    "contactme": "FaleComigo",
+    "copy": "pr.dev. Todos os direitos reservados"
+  }
+}

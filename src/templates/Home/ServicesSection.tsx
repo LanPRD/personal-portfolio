@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { BiCode } from "react-icons/bi";
 import { FaServer } from "react-icons/fa";
@@ -12,12 +13,13 @@ interface ModalViewerProps {
 }
 
 export function ServicesSection() {
+  const t = useTranslations("services");
   const [showModal, setShowModal] = useState<ModalViewerProps>({ isVisible: false });
 
   return (
     <section className="services section" id="services">
-      <h2 className="section__title">Services</h2>
-      <span className="section__subtitle">What i offer</span>
+      <h2 className="section__title">{t("title")}</h2>
+      <span className="section__subtitle">{t("subtitle")}</span>
 
       <ServiceContainer className="services__container containter grid">
         <div className="services__content">
@@ -31,7 +33,7 @@ export function ServicesSection() {
               onClick={() => setShowModal({ isVisible: true, modalIndex: 0 })}
               className="button button--flex button--small button--link services__button"
             >
-              View More <TiArrowRight className="button__icon" />
+              {t("more")} <TiArrowRight className="button__icon" />
             </span>
 
             {showModal.modalIndex === 0 && (
@@ -61,7 +63,7 @@ export function ServicesSection() {
               onClick={() => setShowModal({ isVisible: true, modalIndex: 1 })}
               className="button button--flex button--small button--link services__button"
             >
-              View More <TiArrowRight className="button__icon" />
+              {t("more")} <TiArrowRight className="button__icon" />
             </span>
 
             {showModal.modalIndex === 1 && (
@@ -86,7 +88,7 @@ export function ServicesSection() {
               onClick={() => setShowModal({ isVisible: true, modalIndex: 3 })}
               className="button button--flex button--small button--link services__button"
             >
-              View More <TiArrowRight className="button__icon" />
+              {t("more")} <TiArrowRight className="button__icon" />
             </span>
 
             {showModal.modalIndex === 3 && (

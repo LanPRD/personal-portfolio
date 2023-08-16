@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { FaAngleDown } from "react-icons/fa";
 import { RiBracesFill } from "react-icons/ri";
@@ -6,12 +7,13 @@ import { Skill } from "../../components/Skill";
 import { SkillContainer, SkillWrapper } from "./styles";
 
 export function SkillSection() {
+  const t = useTranslations("skill");
   const [wichListOpenned, setWichListOpenned] = useState<number>(0);
 
   return (
     <section className="skill section" id="skills">
-      <h2 className="section__title">Skills</h2>
-      <span className="section__subtitle">My techinical level</span>
+      <h2 className="section__title">{t("title")}</h2>
+      <span className="section__subtitle">{t("subtitle")}</span>
 
       <SkillWrapper className="container grid">
         <SkillContainer className={wichListOpenned === 0 ? "skills__open" : "skills__close"}>
@@ -20,7 +22,7 @@ export function SkillSection() {
 
             <div>
               <h1 className="skills__title">Frontend developer</h1>
-              <span className="skills__subtitle">More than 1 years</span>
+              <span className="skills__subtitle">{t("morethan")}</span>
             </div>
 
             <FaAngleDown className="skills__arrow" />
@@ -42,7 +44,7 @@ export function SkillSection() {
 
             <div>
               <h1 className="skills__title">Backend developer</h1>
-              <span className="skills__subtitle">More than 1 years</span>
+              <span className="skills__subtitle">{t("morethan")}</span>
             </div>
 
             <FaAngleDown className="skills__arrow" />

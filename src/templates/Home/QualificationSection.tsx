@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { BiBriefcase } from "react-icons/bi";
 import { FaGraduationCap } from "react-icons/fa";
@@ -6,11 +7,12 @@ import { QualificationContainer } from "./styles";
 
 export function QualificationSection() {
   const [tab, setTab] = useState<string>("work");
+  const t = useTranslations("qualification");
 
   return (
     <section className="qualification section">
-      <h2 className="section__title">Qualification</h2>
-      <span className="section__subtitle">My personal journey</span>
+      <h2 className="section__title">{t("title")}</h2>
+      <span className="section__subtitle">{t("subtitle")}</span>
 
       <QualificationContainer className="qualification__container container">
         <div className="qualification__tabs">
@@ -18,14 +20,14 @@ export function QualificationSection() {
             className={`qualification__button button--flex ${tab === "work" ? "qualification__active" : ""}`}
             onClick={() => setTab("work")}
           >
-            <BiBriefcase className="qualification__icon" /> Work
+            <BiBriefcase className="qualification__icon" /> {t("work")}
           </div>
 
           <div
             className={`qualification__button button--flex ${tab === "education" ? "qualification__active" : ""}`}
             onClick={() => setTab("education")}
           >
-            <FaGraduationCap className="qualification__icon" /> Education
+            <FaGraduationCap className="qualification__icon" /> {t("education")}
           </div>
         </div>
 
