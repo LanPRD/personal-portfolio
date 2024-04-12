@@ -83,7 +83,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Portfolio | Allan Prado</title>
+        <title>Portfolio | Allan Prado - Deselvolvedor de Software</title>
 
         {/* Metatags podem ser adicionadas aqui */}
       </Head>
