@@ -60,6 +60,8 @@ export default class MyDocument extends Document {
           />
           <meta property="og:image" content="/assets/img/aboutme.jpg" />
           <meta property="og:url" content="https://portfolio.prdev.com.br/" />
+
+          <meta name="google-site-verification" content="iPv-9zHIdWo7MZ6SZPhdfcL6Diu8WPiVReHAxykWFvs" />
         </Head>
 
         <body>
