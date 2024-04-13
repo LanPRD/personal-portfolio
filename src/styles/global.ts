@@ -246,14 +246,12 @@ export default createGlobalStyle`
   }
 
   ::-webkit-scrollbar {
-    width: 0.8rem;
+    width: 1rem;
     background-color: var(--scroll-bar-color);
-    border-radius: 0.7rem;
   }
 
   ::-webkit-scrollbar-thumb {
     background-color: var(--scroll-thumb-color);
-    border-radius: 0.7rem;
 
     &:hover {
       background-color: var(--first-color);
