@@ -35,8 +35,8 @@ export default class MyDocument extends Document {
 
           <meta name="author" content="Allan Prado" />
           <meta
-            property="description"
-            content="Olá! Sou Allan Prado, um entusiasta da criação de soluções de software inovadoras. Explore meu portfólio e descubra como estou moldando o mundo digital."
+            name="description"
+            content="Olá! Sou Allan Prado, desenvolvedor de software fullstack. Explore meu portfólio e descubra como estou moldando o mundo digital."
           />
           <meta
             name="keywords"
@@ -48,7 +48,7 @@ export default class MyDocument extends Document {
           <meta property="twitter:title" content="Portfolio | Allan Prado" />
           <meta
             property="twitter:description"
-            content="Olá! Sou Allan Prado, um entusiasta da criação de soluções de software inovadoras. Explore meu portfólio e descubra como estou moldando o mundo digital."
+            content="Olá! Sou Allan Prado, desenvolvedor de software fullstack. Explore meu portfólio e descubra como estou moldando o mundo digital."
           />
           <meta property="twitter:image" content="/assets/img/aboutme.jpg" />
           <meta property="twitter:card" content="summary_large_image" />
