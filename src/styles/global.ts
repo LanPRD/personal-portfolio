@@ -4,7 +4,7 @@ export default createGlobalStyle`
   :root {
     --header-height: 4.4rem;
 
-    --hue-color: 152; // Purple 250 - Green 152 - Blue 230 - Pink 340
+    --hue-color: 250; // Purple 250 - Green 152 - Blue 230 - Pink 340
 
     --first-color: hsl(var(--hue-color), 69%, 61%);
     --first-color-second: hsl(var(--hue-color), 69%, 61%);

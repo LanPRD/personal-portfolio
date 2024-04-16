@@ -16,7 +16,7 @@ export function AboutSection() {
         {/* TODO Me */}
         <div className="about__img">
           <Image
-            src="/assets/img/aboutme.jpg"
+            src="/assets/img/aboutme.webp"
             alt="Picture of the author Allan Prado"
             width={265}
             height={200}

@@ -50,7 +50,7 @@ export default class MyDocument extends Document {
             property="twitter:description"
             content="Olá! Sou Allan Prado, desenvolvedor de software fullstack. Explore meu portfólio e descubra como estou moldando o mundo digital."
           />
-          <meta property="twitter:image" content="/assets/img/aboutme.jpg" />
+          <meta property="twitter:image" content="/assets/img/aboutme.webp" />
           <meta property="twitter:card" content="summary_large_image" />
 
           <meta property="og:title" content="Portfolio | Allan Prado" />
@@ -58,7 +58,7 @@ export default class MyDocument extends Document {
             property="og:description"
             content="Olá! Sou Allan Prado, um entusiasta da criação de soluções de software inovadoras. Explore meu portfólio e descubra como estou moldando o mundo digital."
           />
-          <meta property="og:image" content="/assets/img/aboutme.jpg" />
+          <meta property="og:image" content="/assets/img/aboutme.webp" />
           <meta property="og:url" content="https://portfolio.prdev.com.br/" />
 
           <meta name="google-site-verification" content="iPv-9zHIdWo7MZ6SZPhdfcL6Diu8WPiVReHAxykWFvs" />
