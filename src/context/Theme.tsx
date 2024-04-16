@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
 interface ThemeContextProps {
   toggleTheme: () => void;
@@ -22,6 +22,10 @@ function ThemeProvider({ children }: ThemeProps) {
     document.body.classList.toggle("dark-theme", newTheme === "dark");
     localStorage.setItem("selected-theme", newTheme);
   }
+
+  useEffect(() => {
+    document.body.classList.toggle("dark-theme", theme === "dark" ? true : false);
+  }, [theme]);
 
   return <ThemeContext.Provider value={{ toggleTheme, theme }}>{children}</ThemeContext.Provider>;
 }
