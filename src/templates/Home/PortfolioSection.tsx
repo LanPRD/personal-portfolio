@@ -23,13 +23,14 @@ export function PortfolioSection() {
             <PortfolioContent
               title={"LuckySea"}
               description={t("luckysea")}
-              demoLink="https://dev.luckysea.gg/"
+              demoLink="https://beta.luckysea.gg/"
               img={{ src: "/assets/img/luckysea.png", alt: "LuckySea banner project" }}
             />
 
             <PortfolioContent
               title={"Greengrocer"}
               description={t("greengrocer")}
+              demoLink="https://github.com/LanPRD/simple-marketplace-flutter/"
               img={{ src: "/assets/img/greengrocer.webp", alt: "Greengrocer banner project" }}
             />
 
