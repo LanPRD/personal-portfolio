@@ -96,7 +96,7 @@ export default function Home() {
         <ServicesSection />
         <PortfolioSection />
         <ProjectSection />
-        <TestimonialSection />
+        {/* <TestimonialSection /> */}
         <ContactSection />
 
         <ScrollUp />
