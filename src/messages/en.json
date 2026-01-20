@@ -1,0 +1,193 @@
+{
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "contact": "Contact"
+  },
+  "home": {
+    "title": "Hi, I'm Allan",
+    "description": "Web developer with strong experience in building functional and scalable digital products. Specialized in modern web technologies, with a focus on performance, accessibility, and great user experience.",
+    "scroll": "Scroll down",
+    "role": "Full Stack Developer",
+    "contactCta": "Contact me"
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "My introduction",
+    "description": "I am a software developer passionate about creating digital solutions that generate real impact. I have several years of experience building web and mobile applications, including Web3 projects and traditional systems. My journey includes volunteer work, technical leadership, and turning ideas into real products. I have experience with HTML, CSS, JavaScript, TypeScript, React, Next.js, Node.js, Flutter, Dart, and AWS Serverless architecture. I am a self-taught, dedicated, and persistent full stack developer with strong attention to detail and a focus on quality, performance, and accessibility. I believe that even the smallest adjustments make a difference in the final result. Outside of coding, I enjoy games, anime, traveling, hiking, nature, and graffiti. I am always looking for new challenges and professional growth.",
+
+    "imageAlt": "Photo of the author Allan Prado",
+    "downloadCv": "Download CV",
+    "info": {
+      "years": "Years",
+      "experience": "Experience",
+      "awsServerless": "Working with AWS Serverless",
+      "web3": "Working with Web3",
+      "mobile": "Working with mobile development"
+    }
+  },
+  "skill": {
+    "title": "Skills",
+    "subtitle": "My technical level",
+    "morethan": "More than 1 year",
+    "groups": {
+      "frontend": {
+        "title": "Front-End Developer"
+      },
+      "backend": {
+        "title": "Back-End Developer"
+      }
+    },
+    "skills": {
+      "awsServerless": "AWS — Serverless Architecture"
+    }
+  },
+  "qualification": {
+    "title": "Qualifications",
+    "subtitle": "My professional journey",
+    "work": "Professional Experience",
+    "education": "Education",
+
+    "educationItems": {
+      "mechatronics": {
+        "title": "Mechatronics Technician",
+        "subtitle": "Bento Quirino Polytechnic School",
+        "calendar": "2012 - 2014"
+      },
+      "engineering": {
+        "title": "Control and Automation Engineering",
+        "subtitle": "UNISAL - Salesian University of São Paulo",
+        "calendar": "2015 - 2020"
+      }
+    },
+
+    "workItems": {
+      "volunteering": {
+        "title": "Volunteer Work",
+        "subtitle": "Grupo Leme",
+        "calendar": "01/2014 - 07/2017"
+      },
+      "productionAssistant": {
+        "title": "Production Assistant",
+        "subtitle": "Sethi3D",
+        "calendar": "07/2017 - 10/2017"
+      },
+      "commercialIntern": {
+        "title": "Commercial Intern",
+        "subtitle": "CSW Soluções",
+        "calendar": "07/2019 - 02/2020"
+      },
+      "financialConsultant": {
+        "title": "Financial Consultant",
+        "subtitle": "W1 Consultoria",
+        "calendar": "02/2020 - 09/2020"
+      },
+      "freelancer": {
+        "title": "Self-employed",
+        "subtitle": "VBA Developer (Visual Basic for Applications)",
+        "calendar": "01/2020 - 01/2021"
+      },
+      "superopa": {
+        "title": "Full Stack Developer",
+        "subtitle": "SuperOpa | OpaBox",
+        "calendar": "04/2021 - 12/2021"
+      },
+      "cryptolamen": {
+        "title": "Front-End Developer",
+        "subtitle": "Crypto Lamen",
+        "calendar": "01/2021 - 12/2025"
+      },
+      "luckysea": {
+        "title": "Front-End Developer",
+        "subtitle": "LuckySea",
+        "calendar": "08/2022 - 12/2025"
+      },
+      "unimidia": {
+        "title": "Front-End Developer",
+        "subtitle": "Unimidia",
+        "calendar": "11/2022 - Present"
+      }
+    }
+  },
+  "services": {
+    "title": "Services",
+    "subtitle": "What I offer",
+    "more": "See more",
+    "items": {
+      "frontend": {
+        "title": "Front-End Development",
+        "list": {
+          "react": "Applications built with React.js",
+          "next": "Applications built with Next.js",
+          "ui": "Tailwind CSS, styled-components, Radix UI, and Design Systems",
+          "js": "Vanilla JavaScript and jQuery"
+        }
+      },
+      "backend": {
+        "title": "Back-End Development",
+        "list": {
+          "node": "APIs and services built with Node.js",
+          "dotnet": "APIs and services built with .NET",
+          "aws": "AWS Serverless architecture (Lambda, S3, DynamoDB, API Gateway)",
+          "database": "Database modeling and integration",
+          "ai": "Integration with AI services",
+          "bots": "Bot and automation development"
+        }
+      },
+      "mobile": {
+        "title": "Mobile Development",
+        "list": {
+          "flutter": "Mobile applications built with Flutter and Dart",
+          "reactNative": "Mobile applications built with React Native",
+          "ui": "Responsive and consistent user interfaces"
+        }
+      }
+    }
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "subtitle": "Most recent work",
+    "luckysea": "Development of a responsive NFT lootbox for desktop and web apps, featuring custom roulette systems, cards, and exclusive illustrations. The project uses React, TypeScript, ethers.js, and Web3 technologies, with direct blockchain integration and on-chain interactions.",
+    "greengrocer": "Development of an e-commerce application for Android and iOS focused on selling fruits, vegetables, and fresh produce. The app provides an intuitive online shopping experience with product cards, lists, and well-defined flows. Built with Flutter and Dart, including animations, loading states, and screen transitions.",
+    "unimidia": "Development of a responsive digital menu system for desktop, mobile, and Android applications. The platform includes administrative panels, TV display control, and informational cards, aimed at businesses looking to increase sales through visual communication. Built with React, TypeScript, styled-components, and Radix UI, with a future marketplace evolution planned.",
+    "items": {
+      "luckysea": {
+        "title": "LuckySea",
+        "alt": "LuckySea project banner"
+      },
+      "greengrocer": {
+        "title": "Greengrocer",
+        "alt": "Greengrocer project banner"
+      },
+      "unimidia": {
+        "title": "Unimidia",
+        "alt": "Unimidia project banner"
+      }
+    }
+  },
+  "project": {
+    "title": "Have a new project in mind?",
+    "description": "Get in touch and let's turn your idea into a digital product.",
+    "contact": "Get in touch"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Talk to me",
+    "call": "Phone",
+    "location": "Location",
+    "name": "Name",
+    "project": "Project",
+    "message": "Message",
+    "sendMessage": "Send message",
+    "sending": "Sending..."
+  },
+  "footer": {
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "contactme": "Contact me",
+    "copy": "pr.dev — All rights reserved"
+  }
+}
