@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import { IoIosArrowUp } from "react-icons/io";
+import { PiCaretUpBold } from "react-icons/pi";
 
 export function ScrollUp() {
   useEffect(() => {
@@ -55,7 +55,7 @@ export function ScrollUp() {
 
   return (
     <a href="#" className="scrollup" id="scroll-up">
-      <IoIosArrowUp className="scrollup__icon" />
+      <PiCaretUpBold className="scrollup__icon" />
     </a>
   );
 }

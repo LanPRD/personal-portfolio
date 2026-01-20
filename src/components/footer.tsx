@@ -11,13 +11,13 @@ export function Footer() {
   return (
     <footer className="pt-8">
       <div className={cn("bg-(--first-color-second) p-[2rem_0_3rem]", "md:p-[4.8rem_0_5.6rem]")}>
-        <div className={cn("container grid gap-y-14", "sm:grid-cols-2", "md:grid-cols-3")}>
+        <div className={cn("container grid gap-y-14", "sm:grid-cols-2", "md:grid-cols-[auto_1fr_auto]")}>
           <div>
             <h1 className="text-(length:--h1-font-size) text-white mb-(--mb-0-25)">Allan</h1>
             <span className="text-(length:--small-font-size) text-white">Fullstack developer</span>
           </div>
 
-          <ul className={cn("flex flex-col gap-y-6", "md:flex-row md:gap-x-[3.2rem] md:gap-y-0")}>
+          <ul className={cn("flex flex-col justify-center gap-y-6", "md:flex-row md:gap-x-[3.2rem] md:gap-y-0")}>
             <li>
               <Link href="#services" className="text-white hover:text-(--first-color-lighter)">
                 {t("services")}
