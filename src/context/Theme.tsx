@@ -1,3 +1,5 @@
+"use client";
+
 import { createContext, useContext, useEffect, useState } from "react";
 
 interface ThemeContextProps {
@@ -13,7 +15,7 @@ const ThemeContext = createContext<ThemeContextProps>({} as ThemeContextProps);
 
 function ThemeProvider({ children }: ThemeProps) {
   const [theme, setTheme] = useState(() => {
-    return typeof window !== "undefined" ? localStorage.getItem("selected-theme") ?? "light" : "light";
+    return typeof window !== "undefined" ? (localStorage.getItem("selected-theme") ?? "light") : "light";
   });
 
   function toggleTheme() {
