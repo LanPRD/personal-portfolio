@@ -30,16 +30,27 @@ export function ContactForm({ translations }: ContactFormProps) {
 
   async function onSubmit(data: ContactFormData) {
     try {
-      console.log("Form data:", data);
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      });
 
-      // Simular delay de envio
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      const payload = await res.json().catch(() => null);
+
+      console.log(res);
+
+      if (!res.ok) {
+        const msg = payload?.error || "Erro ao enviar mensagem. Tente novamente.";
+        throw new Error(msg);
+      }
 
       toast.success("Mensagem enviada com sucesso!");
       reset();
     } catch (error) {
+      const msg = error instanceof Error ? error.message : "Erro ao enviar mensagem. Tente novamente.";
       console.error("Erro ao enviar:", error);
-      toast.error("Erro ao enviar mensagem. Tente novamente.");
+      toast.error(msg);
     }
   }
 
@@ -72,14 +83,12 @@ export function ContactForm({ translations }: ContactFormProps) {
           aria-busy={isSubmitting}
           aria-live="polite"
         >
-          {isSubmitting ? (
+          {isSubmitting ?
             <>
               <span className="sr-only">Enviando mensagem</span>
               <span aria-hidden="true">{translations.sending || "Enviando..."}</span>
             </>
-          ) : (
-            translations.sendMessage
-          )}
+          : translations.sendMessage}
           <PiPaperPlaneRightBold className="button__icon" aria-hidden="true" />
         </button>
       </div>

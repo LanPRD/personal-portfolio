@@ -32,8 +32,9 @@ export function AboutSection() {
           </div>
 
           <div className={cn("col-span-full flex justify-center", "md:justify-start")}>
-            <a /* download="" href="" */ className="button button--flex">
-              {t("downloadCv")} <PiDownloadSimpleBold className="button__icon ml-2" />
+            <a href="/assets/cv/Allan_Prado_Desenvolvedor_Frontend.pdf" download className="button button--flex">
+              {t("downloadCv")}
+              <PiDownloadSimpleBold className="button__icon ml-2" />
             </a>
           </div>
         </div>
