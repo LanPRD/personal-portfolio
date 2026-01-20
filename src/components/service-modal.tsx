@@ -1,16 +1,15 @@
+import { cn } from "@/lib/css";
 import { Dispatch, SetStateAction } from "react";
-import { BiCheckCircle } from "react-icons/bi";
-import { TiTimes } from "react-icons/ti";
-import { cn } from "../lib/css";
+import { PiCheckCircleBold, PiXBold } from "react-icons/pi";
 
 interface ServicesModalProps {
   title: string;
   services: string[];
   isVisible: boolean;
-  callbackShowModal: Dispatch<SetStateAction<{ isVisible: boolean; modalIndex?: number }>>;
+  onClose: Dispatch<SetStateAction<{ isVisible: boolean; modalIndex?: number }>>;
 }
 
-export function ServicesModal({ services, title, isVisible, callbackShowModal }: ServicesModalProps) {
+export function ServicesModal({ services, title, isVisible, onClose }: ServicesModalProps) {
   return (
     <div
       className={cn(
@@ -21,20 +20,20 @@ export function ServicesModal({ services, title, isVisible, callbackShowModal }:
           : "opacity-0 invisible pointer-events-none"
       )}
     >
-      <div className={cn("relative bg-(--container-color) p-[2.4rem] rounded-[0.8rem]", "md:w-[450px]")}>
+      <div className={cn("relative bg-(--container-color) p-[2.4rem] rounded-[0.8rem]", "md:w-180")}>
         <h4 className="text-(length:--h3-font-size) font-(--font-medium) mb-(--mb-1-5)">
           {title.split(" ")[0]} <br /> {title.split(" ")[1]}
         </h4>
 
-        <TiTimes
-          onClick={() => callbackShowModal({ isVisible: false })}
+        <PiXBold
+          onClick={() => onClose({ isVisible: false })}
           className="absolute top-[1.6rem] right-[1.6rem] text-[2.4rem] text-(--first-color) cursor-pointer"
         />
 
         <ul className="grid gap-y-[1.6rem]">
           {services.map((service, index) => (
             <li key={index} className="flex items-center">
-              <BiCheckCircle className="text-(--first-color) mr-(--mb-0-25)" />
+              <PiCheckCircleBold className="text-(--first-color) mr-(--mb-0-25)" />
               <p>{service}</p>
             </li>
           ))}

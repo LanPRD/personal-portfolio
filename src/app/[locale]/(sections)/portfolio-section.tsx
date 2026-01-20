@@ -1,15 +1,13 @@
+import { Carousel } from "@/components/carousel";
+import { PortfolioContent } from "@/components/portfolio-content";
+import { SectionWrapper } from "@/components/section-wrapper";
 import { useTranslations } from "next-intl";
-import { Carousel } from "../../../components/carousel";
-import { PortfolioContent } from "../../../components/portfolio-content";
 
 export function PortfolioSection() {
   const t = useTranslations("portfolio");
 
   return (
-    <section className="section" id="portfolio">
-      <h2 className="section__title">{t("title")}</h2>
-      <span className="section__subtitle">{t("subtitle")}</span>
-
+    <SectionWrapper id="portfolio" title={t("title")} subtitle={t("subtitle")}>
       <div className="container overflow-initial">
         <Carousel buttons>
           <PortfolioContent
@@ -40,6 +38,6 @@ export function PortfolioSection() {
           />
         </Carousel>
       </div>
-    </section>
+    </SectionWrapper>
   );
 }

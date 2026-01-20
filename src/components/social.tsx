@@ -1,5 +1,5 @@
-import { SiGithub, SiLinkedin } from "react-icons/si";
-import { cn } from "../lib/css";
+import { cn } from "@/lib/css";
+import { PiGithubLogoFill, PiLinkedinLogoFill } from "react-icons/pi";
 
 export function Social() {
   return (
@@ -10,7 +10,7 @@ export function Social() {
         className="text-[2rem] text-(--first-color) hover:text-(--first-color-alt)"
         rel="noreferrer"
       >
-        <SiLinkedin />
+        <PiLinkedinLogoFill />
       </a>
 
       <a
@@ -19,7 +19,7 @@ export function Social() {
         className="text-[2rem] text-(--first-color) hover:text-(--first-color-alt)"
         rel="noreferrer"
       >
-        <SiGithub />
+        <PiGithubLogoFill />
       </a>
     </div>
   );

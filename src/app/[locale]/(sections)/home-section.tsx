@@ -1,9 +1,8 @@
+import { Blob } from "@/components/blob";
+import { Social } from "@/components/social";
+import { cn } from "@/lib/css";
 import { useTranslations } from "next-intl";
-import { BiMessageSquareDetail, BiMouseAlt } from "react-icons/bi";
-import { TiArrowDown } from "react-icons/ti";
-import { Blob } from "../../../components/blob";
-import { Social } from "../../../components/social";
-import { cn } from "../../../lib/css";
+import { PiArrowDownBold, PiChatTextBold, PiMouseBold } from "react-icons/pi";
 
 export function HomeSection() {
   const t = useTranslations("home");
@@ -31,7 +30,7 @@ export function HomeSection() {
             <p className="mb-(--mb-2)">{t("description")}</p>
             <a href="#contact" className="button button--flex">
               Contact Me{" "}
-              <BiMessageSquareDetail className="button__icon text-[2rem] ml-(--mb-0-5) transition-transform duration-300" />
+              <PiChatTextBold className="button__icon text-[2rem] ml-(--mb-0-5) transition-transform duration-300" />
             </a>
           </div>
         </div>
@@ -45,11 +44,11 @@ export function HomeSection() {
               "md:ml-[4.8rem]"
             )}
           >
-            <BiMouseAlt className="text-[3.2rem]" />
+            <PiMouseBold className="text-[3.2rem]" />
             <span className="text-(length:--small-font-size) text-(--title-color) font-(--font-medium) mr-(--mb-0-25)">
               {t("scroll")}
             </span>
-            <TiArrowDown className="text-[2rem]" />
+            <PiArrowDownBold className="text-[2rem]" />
           </a>
         </div>
       </div>

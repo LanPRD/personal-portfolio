@@ -1,6 +1,8 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { usePathname, useRouter } from "@/i18n/navigation";
+import { useLocale, useTranslations } from "next-intl";
+import { useTheme } from "next-themes";
 import Link from "next/link";
 import { useState } from "react";
 import { AiOutlineAppstore } from "react-icons/ai";
@@ -9,14 +11,21 @@ import { IoImageOutline } from "react-icons/io5";
 import { PiMoon, PiSun } from "react-icons/pi";
 import { TiTimes } from "react-icons/ti";
 
-import { useTheme } from "../context/Theme";
-import { Anchor } from "./anchor";
 import { cn } from "../lib/css";
+import { Anchor } from "./anchor";
 
 export function Header() {
+  const locale = useLocale();
+  const pathname = usePathname();
+  const router = useRouter();
+
   const t = useTranslations("header");
-  const { theme, toggleTheme } = useTheme();
+  const { setTheme, theme } = useTheme();
   const [showMenu, setShowMenu] = useState<boolean>(false);
+
+  function switchLocale(newLocale: "en" | "pt-br") {
+    router.replace(pathname, { locale: newLocale });
+  }
 
   return (
     <header
@@ -25,7 +34,7 @@ export function Header() {
     >
       <nav
         className={cn(
-          "container max-w-[968px] h-(--header-height) flex justify-between items-center",
+          "container ml-0 max-w-[968px] h-(--header-height) flex justify-between items-center",
           "md:h-[calc(var(--header-height)+2.4rem)] md:gap-x-[1.6rem]"
         )}
       >
@@ -33,24 +42,28 @@ export function Header() {
           Allan
         </Link>
 
-        <div className="flex gap-2">
-          <Link
-            href="/"
-            className="text-(--title-color) font-(--font-medium) hover:text-(--first-color)"
-            locale="pt"
-            scroll={false}
+        <div className="flex">
+          <button
+            onClick={() => switchLocale("pt-br")}
+            className={cn(
+              "text-(--title-color) font-(--font-medium) hover:text-(--first-color)",
+              locale === "pt-br" && "text-(--first-color)"
+            )}
           >
             pt
-          </Link>
+          </button>
+
           <span className="text-(--title-color)">-</span>
-          <Link
-            href="/"
-            className="text-(--title-color) font-(--font-medium) hover:text-(--first-color)"
-            locale="en"
-            scroll={false}
+
+          <button
+            onClick={() => switchLocale("en")}
+            className={cn(
+              "text-(--title-color) font-(--font-medium) hover:text-(--first-color)",
+              locale === "en" && "text-(--first-color)"
+            )}
           >
             en
-          </Link>
+          </button>
         </div>
 
         <div
@@ -130,15 +143,15 @@ export function Header() {
         </div>
 
         <div className="nav__btns">
-          <div>
-            {theme === "dark" ? (
-              <PiSun className="change-theme" id="theme-button" onClick={toggleTheme} />
-            ) : (
-              <PiMoon className="change-theme" id="theme-button" onClick={toggleTheme} />
-            )}
-          </div>
+          <button
+            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            className="change-theme"
+            aria-label="Toggle theme"
+          >
+            {theme === "dark" ? <PiSun /> : <PiMoon />}
+          </button>
 
-          <div
+          <button
             className={cn(
               "text-(--title-color) font-(--font-medium) text-[2rem]",
               "cursor-pointer hover:text-(--first-color)",
@@ -148,7 +161,7 @@ export function Header() {
             onClick={() => setShowMenu(!showMenu)}
           >
             <AiOutlineAppstore />
-          </div>
+          </button>
         </div>
       </nav>
     </header>

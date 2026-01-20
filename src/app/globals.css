@@ -46,7 +46,7 @@
     --z-modal: 1000;
   }
 
-  body.dark-theme {
+  .dark {
     --first-color-second: hsl(var(--hue-color), 30%, 8%);
     --title-color: hsl(var(--hue-color), 8%, 95%);
     --text-color: hsl(var(--hue-color), 8%, 75%);
@@ -57,8 +57,9 @@
     --scroll-thumb-color: hsl(var(--hue-color), 12%, 86%);
   }
 
+  /* CRÍTICO: Forçar font-size 10px no html */
   html {
-    font-size: 10px;
+    font-size: 10px !important;
     scroll-behavior: smooth;
   }
 
@@ -66,7 +67,6 @@
     margin: 0 0 var(--header-height) 0;
     background-color: var(--body-color);
     color: var(--text-color);
-    font-family: "Poppins", sans-serif;
     font-size: var(--normal-font-size);
     font-weight: 400;
   }
@@ -75,7 +75,6 @@
   textarea,
   select,
   button {
-    font-family: "Poppins", sans-serif;
     font-size: var(--normal-font-size);
     font-weight: 400;
   }
@@ -90,6 +89,8 @@
 
   ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
   }
 
   img {
@@ -99,6 +100,8 @@
 
   button {
     cursor: pointer;
+    border: none;
+    background: none;
   }
 
   a {
@@ -192,7 +195,7 @@
   }
 
   .container {
-    max-width: 768px;
+    max-width: 768px !important;
     margin-left: var(--mb-1-5);
     margin-right: var(--mb-1-5);
   }
@@ -210,6 +213,7 @@
     border-radius: 0.4rem;
     font-weight: var(--font-medium);
     cursor: pointer;
+    border: none;
   }
 
   .button:hover {
@@ -266,10 +270,14 @@
   }
 }
 
-/* Utilities: classes de estado (mais “pontuais”) */
+/* Utilities: classes de estado (mais "pontuais") */
 @layer utilities {
   .show-scroll {
     bottom: 6rem;
+  }
+
+  .overflow-initial {
+    overflow: initial;
   }
 
   @media screen and (min-width: 968px) {

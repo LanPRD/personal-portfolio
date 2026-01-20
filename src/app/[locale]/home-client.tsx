@@ -13,7 +13,7 @@ import { QualificationSection } from "./(sections)/qualification-section";
 import { ServicesSection } from "./(sections)/services-section";
 import { SkillSection } from "./(sections)/skill-section";
 
-export default function HomeClient() {
+export function HomeClient() {
   useEffect(() => {
     const sections = document.querySelectorAll("section[id]");
 

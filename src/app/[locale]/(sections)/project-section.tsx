@@ -1,22 +1,22 @@
+import { cn } from "@/lib/css";
 import { useTranslations } from "next-intl";
 import { PiPaperPlaneRightBold } from "react-icons/pi";
-import { cn } from "../../../lib/css";
 
 export function ProjectSection() {
   const t = useTranslations("project");
 
   return (
     <section className="section">
-      <div className={cn("text-center bg-(--first-color-second) pt-12", "md:text-left md:bg-transparent")}>
+      <div className={cn("text-center bg-(--first-color-second)", "md:text-left md:bg-transparent")}>
         <div
           className={cn(
             "container",
             "sm:grid sm:grid-cols-2",
-            "md:bg-(--first-color-second) md:rounded-[1.6rem] md:p-[4.8rem_4rem] md:grid-cols-[1fr_max-content] md:gap-x-[4.8rem]",
+            "md:bg-(--first-color-second) md:rounded-[1.6rem] md:p-[4.8rem_4rem] md:grid-cols-1 md:gap-x-[4.8rem]",
             "max-md:[&>div]:pb-12"
           )}
         >
-          <div>
+          <div className="text-center">
             <h2 className="text-(length:--h2-font-size) text-white mb-(--mb-0-75)">{t("title")}</h2>
             <p className="text-white mb-(--mb-1-5)">{t("description")}</p>
             <a href="#contact" className="button button--flex button--white">

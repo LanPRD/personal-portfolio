@@ -1,17 +1,15 @@
+import { AboutInfo } from "@/components/about-info";
+import { SectionWrapper } from "@/components/section-wrapper";
+import { cn } from "@/lib/css";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import { BiDownload } from "react-icons/bi";
-import { AboutInfo } from "../../../components/about-info";
-import { cn } from "../../../lib/css";
+import { PiDownloadSimpleBold } from "react-icons/pi";
 
 export function AboutSection() {
   const t = useTranslations("about");
 
   return (
-    <section className="section" id="about">
-      <h2 className="section__title">{t("title")}</h2>
-      <span className="section__subtitle">{t("subtitle")}</span>
-
+    <SectionWrapper id="about" title={t("title")} subtitle={t("subtitle")}>
       <div className={cn("container grid", "sm:grid-cols-2", "md:gap-x-32")}>
         {/* TODO Me */}
         <div className={cn("w-[200px] rounded-[0.8rem] justify-self-center self-start", "md:w-[350px]")}>
@@ -37,11 +35,11 @@ export function AboutSection() {
           <div className={cn("col-span-full flex justify-center", "md:justify-start")}>
             {/* TODO Add my CV in AWS bucket */}
             <a /* download="" href="" */ className="button button--flex">
-              Download CV <BiDownload className="button__icon ml-2" />
+              Download CV <PiDownloadSimpleBold className="button__icon ml-2" />
             </a>
           </div>
         </div>
       </div>
-    </section>
+    </SectionWrapper>
   );
 }

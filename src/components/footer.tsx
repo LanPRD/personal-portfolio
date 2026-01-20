@@ -1,24 +1,23 @@
 "use client";
 
+import { cn } from "@/lib/css";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
-import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
-import { LuTwitter } from "react-icons/lu";
-import { cn } from "../lib/css";
+import { PiInstagramLogo, PiLinkedinLogo } from "react-icons/pi";
 
 export function Footer() {
   const t = useTranslations("footer");
 
   return (
-    <footer className="pt-[2rem]">
+    <footer className="pt-8">
       <div className={cn("bg-(--first-color-second) p-[2rem_0_3rem]", "md:p-[4.8rem_0_5.6rem]")}>
-        <div className={cn("container grid gap-y-[3.5rem]", "sm:grid-cols-2", "md:grid-cols-3")}>
+        <div className={cn("container grid gap-y-14", "sm:grid-cols-2", "md:grid-cols-3")}>
           <div>
             <h1 className="text-(length:--h1-font-size) text-white mb-(--mb-0-25)">Allan</h1>
             <span className="text-(length:--small-font-size) text-white">Fullstack developer</span>
           </div>
 
-          <ul className={cn("flex flex-col gap-y-[1.5rem]", "md:flex-row md:gap-x-[3.2rem] md:gap-y-0")}>
+          <ul className={cn("flex flex-col gap-y-6", "md:flex-row md:gap-x-[3.2rem] md:gap-y-0")}>
             <li>
               <Link href="#services" className="text-white hover:text-(--first-color-lighter)">
                 {t("services")}
@@ -45,16 +44,7 @@ export function Footer() {
               className="text-[2rem] text-white hover:text-(--first-color-lighter) mr-(--mb-1-5) inline-block"
               rel="noreferrer"
             >
-              <FaInstagram />
-            </a>
-
-            <a
-              href="#"
-              target="_blank"
-              className="text-[2rem] text-white hover:text-(--first-color-lighter) mr-(--mb-1-5) inline-block"
-              rel="noreferrer"
-            >
-              <LuTwitter />
+              <PiInstagramLogo />
             </a>
 
             <a
@@ -63,7 +53,7 @@ export function Footer() {
               className="text-[2rem] text-white hover:text-(--first-color-lighter) mr-(--mb-1-5) inline-block"
               rel="noreferrer"
             >
-              <FaLinkedinIn />
+              <PiLinkedinLogo />
             </a>
           </div>
         </div>

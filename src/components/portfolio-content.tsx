@@ -1,6 +1,6 @@
+import { cn } from "@/lib/css";
 import Image from "next/image";
-import { TiArrowRight } from "react-icons/ti";
-import { cn } from "../lib/css";
+import { PiArrowRight } from "react-icons/pi";
 
 interface PortfolioContentProps {
   img?: {
@@ -14,12 +14,12 @@ interface PortfolioContentProps {
 
 export function PortfolioContent({ demoLink, description, title, img }: PortfolioContentProps) {
   return (
-    <div className={cn("grid px-[1.5rem]", "sm:grid-cols-2", "md:items-center", "lg:gap-x-[8rem]")}>
+    <div className={cn("grid px-6", "sm:grid-cols-2", "md:items-center", "lg:gap-x-32")}>
       <div
         className={cn(
-          "relative h-[208px] overflow-hidden flex items-center justify-center",
-          "w-[265px] rounded-[0.5rem] justify-self-center",
-          "md:w-[320px]"
+          "relative h-83 overflow-hidden flex items-center justify-center",
+          "w-106 rounded-lg justify-self-center",
+          "md:w-128"
         )}
       >
         {img && <Image src={img.src} alt={img.alt} className="object-cover" width={320} height={208} />}
@@ -31,7 +31,7 @@ export function PortfolioContent({ demoLink, description, title, img }: Portfoli
         {demoLink && (
           <a href={demoLink} target="_blank" rel="noreferrer" className="button button--flex button--small group">
             Demo
-            <TiArrowRight className="button__icon transition-transform duration-300 group-hover:translate-x-[0.25rem]" />
+            <PiArrowRight className="button__icon transition-transform duration-300 group-hover:translate-x-1" />
           </a>
         )}
       </div>

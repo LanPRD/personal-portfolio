@@ -1,13 +1,18 @@
 import "keen-slider/keen-slider.min.css";
-import "./globals.css";
+import "../globals.css";
 
+import { routing } from "@/i18n/routing";
 import type { Metadata } from "next";
+import { hasLocale, NextIntlClientProvider } from "next-intl";
+import { getMessages, setRequestLocale } from "next-intl/server";
+import { notFound } from "next/navigation";
+import { Toaster } from "sonner";
 
-import { Footer } from "../components/footer";
-import { Header } from "../components/header";
+import { Footer } from "@/components/footer";
+import { Header } from "@/components/header";
+import { AppProvider } from "@/context";
 
-import { AppProvider } from "../context";
-import { NextIntlClientProvider } from "next-intl";
+import { poppins } from "../fonts";
 
 export const metadata: Metadata = {
   authors: [{ name: "Allan Prado" }],
@@ -48,21 +53,34 @@ export const metadata: Metadata = {
   }
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <html>
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
-      </head>
+export function generateStaticParams() {
+  return routing.locales.map(locale => ({ locale }));
+}
 
-      <body>
-        <NextIntlClientProvider>
+type Props = {
+  children: React.ReactNode;
+  params: Promise<{ locale: string }>;
+};
+
+export default async function LocaleLayout({ children, params }: Props) {
+  const { locale } = await params;
+
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
+
+  setRequestLocale(locale);
+  const messages = await getMessages();
+
+  return (
+    <html lang={locale} suppressHydrationWarning className={poppins.variable}>
+      <body className={poppins.className}>
+        <NextIntlClientProvider messages={messages}>
           <AppProvider>
             <Header />
-            {children}
+            <main>{children}</main>
             <Footer />
+            <Toaster />
           </AppProvider>
         </NextIntlClientProvider>
       </body>

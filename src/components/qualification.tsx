@@ -1,5 +1,5 @@
-import { BiCalendar } from "react-icons/bi";
-import { cn } from "../lib/css";
+import { cn } from "@/lib/css";
+import { PiCalendarDots } from "react-icons/pi";
 
 interface QualificationProps {
   title: string;
@@ -16,10 +16,8 @@ export function Qualification({ calendar, subtitle, title, order, isLast = false
         <>
           <div></div>
           <div>
-            <span className="inline-block w-[13px] h-[13px] bg-(--first-color) rounded-full" />
-            {!isLast && (
-              <span className="block w-[1px] h-full bg-(--first-color) translate-x-[6px] -translate-y-[7px]" />
-            )}
+            <span className="inline-block w-5 h-5 bg-(--first-color) rounded-full" />
+            {!isLast && <span className="block w-px h-full bg-(--first-color) translate-x-2 -translate-y-3" />}
           </div>
         </>
       )}
@@ -28,14 +26,14 @@ export function Qualification({ calendar, subtitle, title, order, isLast = false
         <h3 className="text-(length:--normal-font-size) font-(--font-medium)">{title}</h3>
         <span className="inline-block text-(length:--small-font-size) mb-(--mb-1)">{subtitle}</span>
         <div className="text-(length:--smaller-font-size) text-(--text-color-light) flex items-center gap-1">
-          <BiCalendar /> {calendar}
+          <PiCalendarDots /> {calendar}
         </div>
       </div>
 
       {order % 2 !== 0 && (
         <div>
-          <span className="inline-block w-[13px] h-[13px] bg-(--first-color) rounded-full" />
-          {!isLast && <span className="block w-[1px] h-full bg-(--first-color) translate-x-[6px] -translate-y-[7px]" />}
+          <span className="inline-block w-5 h-5 bg-(--first-color) rounded-full" />
+          {!isLast && <span className="block w-px h-full bg-(--first-color) translate-x-2 -translate-y-3" />}
         </div>
       )}
     </div>
