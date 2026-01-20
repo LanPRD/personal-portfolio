@@ -7,7 +7,7 @@ export function Social() {
       <a
         href="https://www.linkedin.com/in/lanprd"
         target="_blank"
-        className="text-[2rem] text-(--first-color) hover:text-(--first-color-alt)"
+        className="text-[2.4rem] text-(--first-color) hover:text-(--first-color-alt)"
         rel="noreferrer"
       >
         <PiLinkedinLogoFill />
@@ -16,7 +16,7 @@ export function Social() {
       <a
         href="https://github.com/LanPRD"
         target="_blank"
-        className="text-[2rem] text-(--first-color) hover:text-(--first-color-alt)"
+        className="text-[2.4rem] text-(--first-color) hover:text-(--first-color-alt)"
         rel="noreferrer"
       >
         <PiGithubLogoFill />

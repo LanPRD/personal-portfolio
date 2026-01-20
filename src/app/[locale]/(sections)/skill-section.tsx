@@ -17,7 +17,7 @@ export function SkillSection() {
       <div className={cn("container grid", "sm:grid-cols-2")}>
         <SkillGroup
           icon={<PiBracketsCurlyBold />}
-          title="Frontend developer"
+          title={t("groups.frontend.title")}
           subtitle={t("morethan")}
           isOpen={openIndex === 0}
           onToggle={() => setOpenIndex(0)}
@@ -32,14 +32,14 @@ export function SkillSection() {
 
         <SkillGroup
           icon={<PiDatabaseFill />}
-          title="Backend developer"
+          title={t("groups.backend.title")}
           subtitle={t("morethan")}
           isOpen={openIndex === 1}
           onToggle={() => setOpenIndex(1)}
         >
           <Skill name="Node.js" numberPercentage={95} />
           <Skill name=".NET" numberPercentage={85} />
-          <Skill name="AWS - Serverless Architecture" numberPercentage={85} />
+          <Skill name={t("skills.awsServerless")} numberPercentage={85} />
         </SkillGroup>
       </div>
     </SectionWrapper>

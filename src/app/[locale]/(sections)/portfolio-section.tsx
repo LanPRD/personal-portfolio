@@ -11,30 +11,24 @@ export function PortfolioSection() {
       <div className="container overflow-initial">
         <Carousel buttons>
           <PortfolioContent
-            title="MBook"
-            description={t("mbook")}
-            img={{ src: "/assets/img/mbook.png", alt: "MBook banner project" }}
-          />
-
-          <PortfolioContent
-            title="LuckySea"
+            title={t("items.luckysea.title")}
             description={t("luckysea")}
             demoLink="https://beta.luckysea.gg/"
-            img={{ src: "/assets/img/luckysea.png", alt: "LuckySea banner project" }}
+            img={{ src: "/assets/img/luckysea.png", alt: t("items.luckysea.alt") }}
           />
 
           <PortfolioContent
-            title="Greengrocer"
+            title={t("items.greengrocer.title")}
             description={t("greengrocer")}
             demoLink="https://github.com/LanPRD/simple-marketplace-flutter/"
-            img={{ src: "/assets/img/greengrocer.webp", alt: "Greengrocer banner project" }}
+            img={{ src: "/assets/img/greengrocer.webp", alt: t("items.greengrocer.alt") }}
           />
 
           <PortfolioContent
-            title="Unimidia"
+            title={t("items.unimidia.title")}
             description={t("unimidia")}
             demoLink="https://dev.unimidia.tv/"
-            img={{ src: "/assets/img/unimidia-bg.png", alt: "Unimidia banner project" }}
+            img={{ src: "/assets/img/unimidia-bg.png", alt: t("items.unimidia.alt") }}
           />
         </Carousel>
       </div>

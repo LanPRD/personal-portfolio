@@ -11,7 +11,7 @@ export function ProjectSection() {
         <div
           className={cn(
             "container",
-            "sm:grid sm:grid-cols-2",
+            "py-20 sm:grid sm:grid-cols-2",
             "md:bg-(--first-color-second) md:rounded-[1.6rem] md:p-[4.8rem_4rem] md:grid-cols-1 md:gap-x-[4.8rem]",
             "max-md:[&>div]:pb-12"
           )}

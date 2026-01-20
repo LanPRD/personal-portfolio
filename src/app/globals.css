@@ -198,6 +198,7 @@
     max-width: 768px !important;
     margin-left: var(--mb-1-5);
     margin-right: var(--mb-1-5);
+    width: auto !important;
   }
 
   .grid {

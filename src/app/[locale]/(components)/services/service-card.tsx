@@ -21,7 +21,7 @@ export function ServiceCard({ icon, title, moreLabel, services }: ServiceCardPro
         "relative bg-(--container-color) p-[5.6rem_0.8rem_2rem_2.4rem] rounded-[0.4rem]",
         "shadow-[0_2px_4px_rgba(0,0,0,0.15)] transition-shadow duration-300",
         "hover:shadow-[0_2px_8px_rgba(0,0,0,0.15)]",
-        "max-[350px]:pr-[4.5rem]"
+        "max-[350px]:pr-18"
       )}
     >
       <div>

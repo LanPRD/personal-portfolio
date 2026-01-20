@@ -5,61 +5,188 @@
     "skills": "Habilidades",
     "services": "Serviços",
     "portfolio": "Portfólio",
-    "contact": "Entre em contato"
+    "contact": "Contato"
   },
   "home": {
     "title": "Oi, eu sou o Allan",
-    "description": "Desenvolvedor web com forte expertise e paixão por transformar código em soluções funcionais. Especializado em tecnologias web e dedicado a criar experiências digitais excepcionais.",
-    "scroll": "Role para baixo"
+    "description": "Desenvolvedor web com forte experiência na criação de produtos digitais funcionais e escaláveis. Especializado em tecnologias web modernas, com foco em performance, acessibilidade e boa experiência do usuário.",
+    "scroll": "Role para baixo",
+    "role": "Desenvolvedor Full Stack",
+    "contactCta": "Fale comigo"
   },
   "about": {
     "title": "Sobre Mim",
     "subtitle": "Minha introdução",
-    "description": "Desenvolvedor de software apaixonado por criar soluções que impactam a vida das pessoas. Com experiência em blockchain e web convencional, minha jornada inclui 4 anos de trabalho voluntário, liderança de equipes e transformação de ideias em realidade. Especializado em HTML, CSS, JS, React, Next, Node, Flutter, Dart, AWS Serverless e TypeScript, sou um desenvolvedor fullstack autodidata, dedicado e persistente. Minha atenção meticulosa aos detalhes impulsiona a qualidade de cada projeto, pois acredito que até o menor aspecto faz diferença no resultado final. Meu objetivo é criar aplicativos memoráveis que enriqueçam a vida das pessoas. Além do mundo da programação, meu tempo é dividido entre jogos, animes, viagens, trilhas, natureza e grafite. Estou ansioso para enfrentar novos desafios e continuar crescendo como profissional."
+    "description": "Sou desenvolvedor de software apaixonado por criar soluções digitais que geram impacto real. Atuo há vários anos no desenvolvimento de aplicações web e mobile, incluindo projetos Web3 e sistemas tradicionais. Minha trajetória envolve trabalho voluntário, liderança técnica e a transformação de ideias em produtos reais. Tenho experiência com HTML, CSS, JavaScript, TypeScript, React, Next.js, Node.js, Flutter, Dart e arquitetura AWS Serverless. Sou um desenvolvedor full stack autodidata, dedicado e persistente, com forte atenção aos detalhes e foco em qualidade, performance e acessibilidade. Acredito que até os menores ajustes fazem diferença no resultado final. Fora do código, gosto de jogos, animes, viagens, trilhas, natureza e grafite. Estou sempre em busca de novos desafios e evolução profissional.",
+
+    "imageAlt": "Foto do autor Allan Prado",
+    "downloadCv": "Baixar CV",
+    "info": {
+      "years": "Anos",
+      "experience": "Experiência",
+      "awsServerless": "Trabalhando com AWS Serverless",
+      "web3": "Trabalhando com Web3",
+      "mobile": "Trabalhando com desenvolvimento mobile"
+    }
   },
   "skill": {
     "title": "Habilidades",
     "subtitle": "Meu nível técnico",
-    "morethan": "Mais de 1 ano"
+    "morethan": "Mais de 1 ano",
+    "groups": {
+      "frontend": {
+        "title": "Desenvolvedor Front-End"
+      },
+      "backend": {
+        "title": "Desenvolvedor Back-End"
+      }
+    },
+    "skills": {
+      "awsServerless": "AWS — Arquitetura Serverless"
+    }
   },
   "qualification": {
     "title": "Qualificações",
-    "subtitle": "Minha jornada pessoal",
+    "subtitle": "Minha jornada profissional",
     "work": "Experiência Profissional",
-    "education": "Educação"
+    "education": "Formação Acadêmica",
+
+    "educationItems": {
+      "mechatronics": {
+        "title": "Técnico em Mecatrônica",
+        "subtitle": "Colégio Politécnico Bento Quirino",
+        "calendar": "2012 - 2014"
+      },
+      "engineering": {
+        "title": "Engenharia de Controle e Automação",
+        "subtitle": "UNISAL - Universidade Salesiana de São Paulo",
+        "calendar": "2015 - 2020"
+      }
+    },
+    "workItems": {
+      "volunteering": {
+        "title": "Trabalho Voluntário",
+        "subtitle": "Grupo Leme",
+        "calendar": "01/2014 - 07/2017"
+      },
+      "productionAssistant": {
+        "title": "Auxiliar de Produção",
+        "subtitle": "Sethi3D",
+        "calendar": "07/2017 - 10/2017"
+      },
+      "commercialIntern": {
+        "title": "Estagiário Comercial",
+        "subtitle": "CSW Soluções",
+        "calendar": "07/2019 - 02/2020"
+      },
+      "financialConsultant": {
+        "title": "Consultor Financeiro",
+        "subtitle": "W1 Consultoria",
+        "calendar": "02/2020 - 09/2020"
+      },
+      "freelancer": {
+        "title": "Autônomo",
+        "subtitle": "Desenvolvedor VBA (Visual Basic for Applications)",
+        "calendar": "01/2020 - 01/2021"
+      },
+      "superopa": {
+        "title": "Desenvolvedor Full Stack",
+        "subtitle": "SuperOpa | OpaBox",
+        "calendar": "04/2021 - 12/2021"
+      },
+      "cryptolamen": {
+        "title": "Desenvolvedor Front-End",
+        "subtitle": "Crypto Lamen",
+        "calendar": "01/2021 - 12/2025"
+      },
+      "luckysea": {
+        "title": "Desenvolvedor Front-End",
+        "subtitle": "LuckySea",
+        "calendar": "08/2022 - 12/2025"
+      },
+      "unimidia": {
+        "title": "Desenvolvedor Front-End",
+        "subtitle": "Unimidia",
+        "calendar": "11/2022 - Atual"
+      }
+    }
   },
   "services": {
     "title": "Serviços",
     "subtitle": "O que ofereço",
-    "more": "Ver Mais"
+    "more": "Ver mais",
+    "items": {
+      "frontend": {
+        "title": "Desenvolvimento Front-End",
+        "list": {
+          "react": "Aplicações com React.js",
+          "next": "Aplicações com Next.js",
+          "ui": "Tailwind CSS, styled-components, Radix UI e Design Systems",
+          "js": "JavaScript puro (Vanilla JS) e jQuery"
+        }
+      },
+      "backend": {
+        "title": "Desenvolvimento Back-End",
+        "list": {
+          "node": "APIs e serviços com Node.js",
+          "dotnet": "APIs e serviços com .NET",
+          "aws": "Arquitetura AWS Serverless (Lambda, S3, DynamoDB, API Gateway)",
+          "database": "Modelagem e integração com bancos de dados",
+          "ai": "Integração com serviços de IA",
+          "bots": "Desenvolvimento de bots e automações"
+        }
+      },
+      "mobile": {
+        "title": "Desenvolvimento Mobile",
+        "list": {
+          "flutter": "Aplicações mobile com Flutter e Dart",
+          "reactNative": "Aplicações mobile com React Native",
+          "ui": "Interfaces responsivas e consistentes"
+        }
+      }
+    }
   },
   "portfolio": {
     "title": "Portfólio",
     "subtitle": "Trabalhos mais recentes",
-    "mbook": "Aplicativo de diário pessoal para anotar pensamentos, sentimentos e momentos. Possui entradas em texto rico, cartões e botões. Sem animações. Projetado para indivíduos em busca de auto reflexão e compartilhamento. Capturar ações, pensamentos e momentos promove autoconsciência, expressão e clareza. Desenvolvido com Flutter, Node e Dart. Um intuitivo aplicativo de anotações permitindo entradas de texto, imagens e vídeo. Uma solução de diário única no mercado.",
-    "luckysea": "Desenvolvi uma NFT lootbox responsiva para desktop e web app, com roletas originais, cartões e ilustrações. Tecnologias como ReactJS, TypeScript, ethers.js e web3 foram utilizadas. Conexão direta com a blockchain.",
-    "greengrocer": "Desenvolvi um aplicativo de e-commerce para Android e iOS, focado em vegetais, verduras, frutas e mais. Oferece conveniência para compras online, apresentando botões, cartões de produtos e listas de compras. Construído com Flutter/Dart, exibe cartões, carregamentos e transições de tela.",
-    "unimidia": "Criei um menu digital responsivo para desktop, mobile e aplicativo Android. Possui painéis, controle de TV e cartões de informações. Destinado a empresas que desejam aumentar as vendas ao promover produtos. Construído com ReactJS, TypeScript, styled-components e Radix. Implementação futura de marketplace planejada."
+    "luckysea": "Desenvolvimento de uma lootbox NFT responsiva para desktop e web app, com roletas personalizadas, cartões e ilustrações exclusivas. O projeto utiliza React, TypeScript, ethers.js e tecnologias Web3, com integração direta à blockchain e interação on-chain.",
+    "greengrocer": "Desenvolvimento de um aplicativo de e-commerce para Android e iOS, voltado para a venda de frutas, verduras e vegetais. O app oferece uma experiência intuitiva de compra online, com cartões de produtos, listas e fluxos bem definidos. Construído com Flutter e Dart, incluindo animações, carregamentos e transições de tela.",
+    "unimidia": "Desenvolvimento de um sistema de menu digital responsivo para desktop, mobile e aplicativo Android. A plataforma conta com painéis administrativos, controle de exibição em TVs e cartões informativos, focada em empresas que desejam aumentar vendas por meio de comunicação visual. Construído com React, TypeScript, styled-components e Radix UI, com evolução planejada para marketplace.",
+    "items": {
+      "luckysea": {
+        "title": "LuckySea",
+        "alt": "Banner do projeto LuckySea"
+      },
+      "greengrocer": {
+        "title": "Greengrocer",
+        "alt": "Banner do projeto Greengrocer"
+      },
+      "unimidia": {
+        "title": "Unimidia",
+        "alt": "Banner do projeto Unimidia"
+      }
+    }
   },
   "project": {
-    "title": "Você tem um novo projeto",
-    "description": "Entre em contato agora e ganhe desconto em seu novo projeto.",
-    "contact": "Entre em Contato"
+    "title": "Tem um novo projeto em mente?",
+    "description": "Entre em contato e vamos transformar sua ideia em um produto digital.",
+    "contact": "Entrar em contato"
   },
   "contact": {
-    "title": "Entre em Contato",
+    "title": "Contato",
     "subtitle": "Fale comigo",
-    "call": "Me Ligue",
+    "call": "Telefone",
     "location": "Localização",
     "name": "Nome",
     "project": "Projeto",
     "message": "Mensagem",
-    "sendMessage": "Enviar Mensagem"
+    "sendMessage": "Enviar mensagem",
+    "sending": "Enviando..."
   },
   "footer": {
     "services": "Serviços",
     "portfolio": "Portfólio",
-    "contactme": "FaleComigo",
-    "copy": "pr.dev. Todos os direitos reservados"
+    "contactme": "Fale comigo",
+    "copy": "pr.dev — Todos os direitos reservados"
   }
 }

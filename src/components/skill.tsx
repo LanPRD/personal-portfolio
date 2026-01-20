@@ -11,8 +11,8 @@ export function Skill({ name, numberPercentage }: SkillProps) {
         <span className="text-(length:--normal-font-size)">{numberPercentage}%</span>
       </div>
 
-      <div className="h-[5px] rounded-[0.4rem] bg-(--first-color-lighter)">
-        <span className="block h-[5px] rounded-[0.4rem] bg-(--first-color)" style={{ width: `${numberPercentage}%` }} />
+      <div className="h-2 rounded-[0.4rem] bg-(--first-color-lighter)">
+        <span className="block h-2 rounded-[0.4rem] bg-(--first-color)" style={{ width: `${numberPercentage}%` }} />
       </div>
     </div>
   );

@@ -11,11 +11,11 @@ export function Blob() {
       <svg
         className={cn(
           // Base size
-          "w-[200px] fill-(--first-color)",
+          "w-80 fill-(--first-color)",
           // Responsive sizes
-          "max-[350px]:w-[180px]",
-          "sm:w-[200px]",
-          "md:w-[270px]",
+          "max-[350px]:w-72",
+          "sm:w-80",
+          "md:w-180",
           "lg:w-[320px]"
         )}
         viewBox="0 0 200 200"
@@ -34,7 +34,7 @@ export function Blob() {
           />
 
           {/* TODO - add link (change X and Y)*/}
-          <image className="w-[180px]" x="5" y="35" xlinkHref="/assets/img/me.webp" />
+          <image className="w-72" x="5" y="35" xlinkHref="/assets/img/me.webp" />
         </g>
       </svg>
     </div>

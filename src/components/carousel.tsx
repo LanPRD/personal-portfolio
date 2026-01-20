@@ -70,10 +70,7 @@ export function Carousel({ buttons = true, breakpoints, children }: CarouselProp
       <div className="relative">
         <div ref={sliderRef} className="keen-slider">
           {childrenArray.map((child, index) => (
-            <div
-              key={index}
-              className="keen-slider__slide bg-transparent flex items-center justify-center h-auto px-[6px]"
-            >
+            <div key={index} className="keen-slider__slide bg-transparent flex items-center justify-center h-auto px-2">
               {child}
             </div>
           ))}
@@ -103,9 +100,9 @@ function Arrow(props: { left?: boolean; onClick: (e: any) => void }) {
     <svg
       onClick={props.onClick}
       className={cn(
-        "w-[2rem] h-[2rem] absolute top-1/2 -translate-y-1/2",
+        "w-8 h-8 absolute top-1/2 -translate-y-1/2",
         "fill-(--first-color) cursor-pointer",
-        props.left ? "left-[-0.75rem] lg:left-[-5.6rem]" : "right-[-0.75rem] lg:right-[-5.6rem]"
+        props.left ? "-left-3 lg:-left-22" : "-right-3 lg:-right-22"
       )}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
@@ -127,10 +124,10 @@ function Dots(props: { sliders: number[]; instanceRef: KeenSliderInstance; curre
               props.instanceRef?.moveToIdx(idx);
             }}
             className={cn(
-              "border-none w-[10px] h-[10px] bg-[#c5c5c5] rounded-full",
-              "m-[2.5rem_4px] p-[6px] cursor-pointer",
+              "border-none w-4 h-4 bg-[#c5c5c5] rounded-full",
+              "m-[2.5rem_4px] p-2 cursor-pointer",
               "focus:outline-none",
-              "lg:mt-[5.6rem]",
+              "lg:mt-[22.4]",
               props.currentSlide === idx && "bg-(--first-color)"
             )}
           />

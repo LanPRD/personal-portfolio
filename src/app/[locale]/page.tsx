@@ -1,3 +1,4 @@
+import { ScrollUp } from "@/components/scroll-up";
 import type { Metadata } from "next";
 import { setRequestLocale } from "next-intl/server";
 import { AboutSection } from "./(sections)/about-section";
@@ -32,6 +33,8 @@ export default async function Home({ params }: Props) {
       <PortfolioSection />
       <ProjectSection />
       <ContactSection />
+
+      <ScrollUp />
     </>
   );
 }

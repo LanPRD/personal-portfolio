@@ -24,12 +24,15 @@ export function HomeSection() {
 
           <div className={cn("col-[1/3]", "sm:col-auto")}>
             <h1 className="text-(length:--big-font-size)">{t("title")}</h1>
+
             <h3 className="text-(length:--h3-font-size) text-(--text-color) font-(--font-medium) mb-(--mb-0-75)">
-              Fullstack developer
+              {t("role")}
             </h3>
+
             <p className="mb-(--mb-2)">{t("description")}</p>
+
             <a href="#contact" className="button button--flex">
-              Contact Me{" "}
+              {t("contactCta")}
               <PiChatTextBold className="button__icon text-[2rem] ml-(--mb-0-5) transition-transform duration-300" />
             </a>
           </div>

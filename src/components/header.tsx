@@ -4,14 +4,21 @@ import { usePathname, useRouter } from "@/i18n/navigation";
 import { useLocale, useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
 import Link from "next/link";
-import { useState } from "react";
-import { AiOutlineAppstore } from "react-icons/ai";
-import { BiBriefcase, BiFile, BiHomeAlt, BiMessageSquareDetail, BiUser } from "react-icons/bi";
-import { IoImageOutline } from "react-icons/io5";
-import { PiMoon, PiSun } from "react-icons/pi";
-import { TiTimes } from "react-icons/ti";
+import { useEffect, useState } from "react";
+import {
+  PiBriefcase,
+  PiChatText,
+  PiFileCode,
+  PiHouse,
+  PiImage,
+  PiMoon,
+  PiSquaresFour,
+  PiSun,
+  PiUser,
+  PiXBold
+} from "react-icons/pi";
 
-import { cn } from "../lib/css";
+import { cn } from "@/lib/css";
 import { Anchor } from "./anchor";
 
 export function Header() {
@@ -20,8 +27,13 @@ export function Header() {
   const router = useRouter();
 
   const t = useTranslations("header");
-  const { setTheme, theme } = useTheme();
+  const { setTheme, theme, resolvedTheme } = useTheme();
   const [showMenu, setShowMenu] = useState<boolean>(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
+
+  const isDark = resolvedTheme === "dark";
 
   function switchLocale(newLocale: "en" | "pt-br") {
     router.replace(pathname, { locale: newLocale });
@@ -34,7 +46,7 @@ export function Header() {
     >
       <nav
         className={cn(
-          "container ml-0 max-w-[968px] h-(--header-height) flex justify-between items-center",
+          "container max-w-387 h-(--header-height) flex justify-between items-center",
           "md:h-[calc(var(--header-height)+2.4rem)] md:gap-x-[1.6rem]"
         )}
       >
@@ -85,7 +97,7 @@ export function Header() {
               activeLink={true}
               className="nav__item"
               href="home"
-              icon={<BiHomeAlt className="text-[1.8rem] md:hidden" />}
+              icon={<PiHouse className="text-[1.8rem] md:hidden" />}
               text={t("home")}
               setShowMenu={() => setShowMenu(false)}
             />
@@ -93,7 +105,7 @@ export function Header() {
             <Anchor
               className="nav__item"
               href="about"
-              icon={<BiUser className="text-[1.8rem] md:hidden" />}
+              icon={<PiUser className="text-[1.8rem] md:hidden" />}
               text={t("about")}
               setShowMenu={() => setShowMenu(false)}
             />
@@ -101,7 +113,7 @@ export function Header() {
             <Anchor
               className="nav__item"
               href="skills"
-              icon={<BiFile className="text-[1.8rem] md:hidden" />}
+              icon={<PiFileCode className="text-[1.8rem] md:hidden" />}
               text={t("skills")}
               setShowMenu={() => setShowMenu(false)}
             />
@@ -109,7 +121,7 @@ export function Header() {
             <Anchor
               className="nav__item"
               href="services"
-              icon={<BiBriefcase className="text-[1.8rem] md:hidden" />}
+              icon={<PiBriefcase className="text-[1.8rem] md:hidden" />}
               text={t("services")}
               setShowMenu={() => setShowMenu(false)}
             />
@@ -117,7 +129,7 @@ export function Header() {
             <Anchor
               className="nav__item"
               href="portfolio"
-              icon={<IoImageOutline className="text-[1.8rem] md:hidden" />}
+              icon={<PiImage className="text-[1.8rem] md:hidden" />}
               text={t("portfolio")}
               setShowMenu={() => setShowMenu(false)}
             />
@@ -125,13 +137,13 @@ export function Header() {
             <Anchor
               className="nav__item"
               href="contact"
-              icon={<BiMessageSquareDetail className="text-[1.8rem] md:hidden" />}
+              icon={<PiChatText className="text-[1.8rem] md:hidden" />}
               text={t("contact")}
               setShowMenu={() => setShowMenu(false)}
             />
           </ul>
 
-          <TiTimes
+          <PiXBold
             className={cn(
               "absolute right-8 bottom-[0.8rem] text-[2.4rem]",
               "cursor-pointer text-(--first-color) hover:text-(--first-color-alt)",
@@ -142,13 +154,13 @@ export function Header() {
           />
         </div>
 
-        <div className="nav__btns">
-          <button
-            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            className="change-theme"
-            aria-label="Toggle theme"
-          >
-            {theme === "dark" ? <PiSun /> : <PiMoon />}
+        <div className="nav__btns gap-3">
+          <button onClick={() => setTheme(isDark ? "light" : "dark")} aria-label="Toggle theme">
+            {!mounted ?
+              <span className="inline-block w-6 h-6" />
+            : isDark ?
+              <PiSun />
+            : <PiMoon />}
           </button>
 
           <button
@@ -160,7 +172,7 @@ export function Header() {
             id="nav-toggle"
             onClick={() => setShowMenu(!showMenu)}
           >
-            <AiOutlineAppstore />
+            <PiSquaresFour />
           </button>
         </div>
       </nav>

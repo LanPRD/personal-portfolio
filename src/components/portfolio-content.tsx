@@ -19,10 +19,10 @@ export function PortfolioContent({ demoLink, description, title, img }: Portfoli
         className={cn(
           "relative h-83 overflow-hidden flex items-center justify-center",
           "w-106 rounded-lg justify-self-center",
-          "md:w-128"
+          "md:w-lg"
         )}
       >
-        {img && <Image src={img.src} alt={img.alt} className="object-cover" width={320} height={208} />}
+        {img && <Image src={img.src} alt={img.alt} className="object-cover rounded-lg" width={320} height={208} />}
       </div>
 
       <div>

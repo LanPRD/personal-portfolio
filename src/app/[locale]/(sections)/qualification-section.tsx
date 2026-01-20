@@ -9,43 +9,77 @@ export function QualificationSection() {
   const educationContent = (
     <>
       <Qualification
-        title="Mechatronics technician"
-        subtitle="Colégio Politécnico Bento-Quirino"
-        calendar="2012 - 2014"
+        title={t("educationItems.mechatronics.title")}
+        subtitle={t("educationItems.mechatronics.subtitle")}
+        calendar={t("educationItems.mechatronics.calendar")}
         order={1}
       />
       <Qualification
-        title="Control and Automation Enginner"
-        subtitle="UNISAL - Universidade Salesiana de São Paulo"
-        calendar="2015 - 2020"
+        title={t("educationItems.engineering.title")}
+        subtitle={t("educationItems.engineering.subtitle")}
+        calendar={t("educationItems.engineering.calendar")}
         order={2}
-        isLast={true}
+        isLast
       />
     </>
   );
 
   const workContent = (
     <>
-      <Qualification title="Volunteering" subtitle="Grupo Leme" calendar="01/2014 - 07/2017" order={0} />
-      <Qualification title="Production assistant" subtitle="Sethi3D" calendar="07/2017 - 10/2017" order={1} />
-      <Qualification title="Commercial intern" subtitle="CSW Soluções" calendar="07/2019 - 02/2020" order={2} />
-      <Qualification title="Financial consultant" subtitle="W1 Consultoria" calendar="02/2020 - 09/2020" order={3} />
       <Qualification
-        title="Self-employed"
-        subtitle="Visual Basic for Applications Developer"
-        calendar="01/2020 - 1/2021"
+        title={t("workItems.volunteering.title")}
+        subtitle={t("workItems.volunteering.subtitle")}
+        calendar={t("workItems.volunteering.calendar")}
+        order={0}
+      />
+      <Qualification
+        title={t("workItems.productionAssistant.title")}
+        subtitle={t("workItems.productionAssistant.subtitle")}
+        calendar={t("workItems.productionAssistant.calendar")}
+        order={1}
+      />
+      <Qualification
+        title={t("workItems.commercialIntern.title")}
+        subtitle={t("workItems.commercialIntern.subtitle")}
+        calendar={t("workItems.commercialIntern.calendar")}
+        order={2}
+      />
+      <Qualification
+        title={t("workItems.financialConsultant.title")}
+        subtitle={t("workItems.financialConsultant.subtitle")}
+        calendar={t("workItems.financialConsultant.calendar")}
+        order={3}
+      />
+      <Qualification
+        title={t("workItems.freelancer.title")}
+        subtitle={t("workItems.freelancer.subtitle")}
+        calendar={t("workItems.freelancer.calendar")}
         order={4}
       />
-
-      <Qualification title="Fullstack developer" subtitle="SuperOpa | OpaBox" calendar="04/2021 - 12/2021" order={5} />
-      <Qualification title="Frontend developer" subtitle="Crypto Lamen" calendar="01/2021 - current" order={6} />
-      <Qualification title="Frontend developer" subtitle="LuckySea" calendar="08/2022 - current" order={7} />
       <Qualification
-        title="Frontend developer"
-        subtitle="Unimidia"
-        calendar="11/2022 - current"
+        title={t("workItems.superopa.title")}
+        subtitle={t("workItems.superopa.subtitle")}
+        calendar={t("workItems.superopa.calendar")}
+        order={5}
+      />
+      <Qualification
+        title={t("workItems.cryptolamen.title")}
+        subtitle={t("workItems.cryptolamen.subtitle")}
+        calendar={t("workItems.cryptolamen.calendar")}
+        order={6}
+      />
+      <Qualification
+        title={t("workItems.luckysea.title")}
+        subtitle={t("workItems.luckysea.subtitle")}
+        calendar={t("workItems.luckysea.calendar")}
+        order={7}
+      />
+      <Qualification
+        title={t("workItems.unimidia.title")}
+        subtitle={t("workItems.unimidia.subtitle")}
+        calendar={t("workItems.unimidia.calendar")}
         order={8}
-        isLast={true}
+        isLast
       />
     </>
   );

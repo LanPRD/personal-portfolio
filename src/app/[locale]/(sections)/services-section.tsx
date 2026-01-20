@@ -10,18 +10,30 @@ export function ServicesSection() {
   const services = [
     {
       icon: <PiBracketsAngleBold />,
-      title: "Frontend Development",
-      services: ["React.js.", "Next.js.", "Tailwind, styled-components, Radix, etc.", "jQuery and Vanilla JS."]
+      title: t("items.frontend.title"),
+      services: [
+        t("items.frontend.list.react"),
+        t("items.frontend.list.next"),
+        t("items.frontend.list.ui"),
+        t("items.frontend.list.js")
+      ]
     },
     {
       icon: <PiHardDrivesFill />,
-      title: "Backend Development",
-      services: ["Backend with Node.js.", "AWS Serverless configurations.", "Database.", "IA.", "Bots."]
+      title: t("items.backend.title"),
+      services: [
+        t("items.backend.list.node"),
+        t("items.backend.list.dotnet"),
+        t("items.backend.list.aws"),
+        t("items.backend.list.database"),
+        t("items.backend.list.ai"),
+        t("items.backend.list.bots")
+      ]
     },
     {
       icon: <PiDeviceMobile />,
-      title: "Mobile Development",
-      services: ["Flutter/Dart.", "React Native.", "Tailwind, styled-components, etc."]
+      title: t("items.mobile.title"),
+      services: [t("items.mobile.list.flutter"), t("items.mobile.list.reactNative"), t("items.mobile.list.ui")]
     }
   ];
 
@@ -29,7 +41,7 @@ export function ServicesSection() {
     <SectionWrapper id="services" title={t("title")} subtitle={t("subtitle")}>
       <div
         className={cn(
-          "container grid gap-[2.4rem] grid-cols-2",
+          "grid gap-[2.4rem] grid-cols-2",
           "max-[350px]:grid-cols-[max-content] max-[350px]:justify-center",
           "md:grid-cols-[repeat(3,218px)] md:justify-center",
           "lg:grid-cols-[repeat(3,268px)]"
