@@ -152,6 +152,7 @@
     "luckysea": "Desenvolvimento de uma lootbox NFT responsiva para desktop e web app, com roletas personalizadas, cartões e ilustrações exclusivas. O projeto utiliza React, TypeScript, ethers.js e tecnologias Web3, com integração direta à blockchain e interação on-chain.",
     "greengrocer": "Desenvolvimento de um aplicativo de e-commerce para Android e iOS, voltado para a venda de frutas, verduras e vegetais. O app oferece uma experiência intuitiva de compra online, com cartões de produtos, listas e fluxos bem definidos. Construído com Flutter e Dart, incluindo animações, carregamentos e transições de tela.",
     "unimidia": "Desenvolvimento de um sistema de menu digital responsivo para desktop, mobile e aplicativo Android. A plataforma conta com painéis administrativos, controle de exibição em TVs e cartões informativos, focada em empresas que desejam aumentar vendas por meio de comunicação visual. Construído com React, TypeScript, styled-components e Radix UI, com evolução planejada para marketplace.",
+    "ledgerapi": "Desenvolvimento de uma API REST para gerenciamento de transações financeiras, com foco em consistência e confiabilidade por meio de idempotência. O sistema garante a não duplicação de operações em cenários de retry e falhas de rede, realizando cálculos automáticos de saldo e validações de débito/crédito. Construído com .NET, Entity Framework Core e PostgreSQL, seguindo princípios de Clean Architecture, Domain-Driven Design e testes automatizados.",
     "items": {
       "luckysea": {
         "title": "LuckySea",
@@ -164,6 +165,10 @@
       "unimidia": {
         "title": "Unimidia",
         "alt": "Banner do projeto Unimidia"
+      },
+      "ledgerapi": {
+        "title": "Ledger API",
+        "alt": "Banner do projeto Ledger API"
       }
     }
   },
