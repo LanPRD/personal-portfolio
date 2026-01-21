@@ -15,6 +15,7 @@ import { AppProvider } from "@/context";
 import { poppins } from "../fonts";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://portfolio.prdev.com.br"),
   authors: [{ name: "Allan Prado" }],
   title: "Portfolio | Allan Prado",
   description:

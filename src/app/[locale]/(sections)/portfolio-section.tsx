@@ -21,6 +21,7 @@ export function PortfolioSection() {
             title={t("items.ledgerapi.title")}
             description={t("ledgerapi")}
             demoLink="https://github.com/LanPRD/ledger-api/"
+            documentationLink="https://pu7gq367ba.execute-api.sa-east-1.amazonaws.com/swagger/index.html"
             // img={{ src: "/assets/img/greengrocer.webp", alt: t("items.ledgerapi.alt") }}
           />
 

@@ -10,9 +10,10 @@ interface PortfolioContentProps {
   title: string;
   description: string;
   demoLink?: string;
+  documentationLink?: string;
 }
 
-export function PortfolioContent({ demoLink, description, title, img }: PortfolioContentProps) {
+export function PortfolioContent({ demoLink, description, title, img, documentationLink }: PortfolioContentProps) {
   const hasImage = Boolean(img);
 
   return (
@@ -34,12 +35,26 @@ export function PortfolioContent({ demoLink, description, title, img }: Portfoli
 
         <p className="mb-(--mb-0-75)">{description}</p>
 
-        {demoLink && (
-          <a href={demoLink} target="_blank" rel="noreferrer" className="button button--flex button--small group">
-            Demo
-            <PiArrowRight className="button__icon transition-transform duration-300 group-hover:translate-x-1" />
-          </a>
-        )}
+        <div className="flex gap-8">
+          {demoLink && (
+            <a href={demoLink} target="_blank" rel="noreferrer" className="button button--flex button--small group">
+              Demo
+              <PiArrowRight className="button__icon transition-transform duration-300 group-hover:translate-x-1" />
+            </a>
+          )}
+
+          {documentationLink && (
+            <a
+              href={documentationLink}
+              target="_blank"
+              rel="noreferrer"
+              className="button button--flex button--small group"
+            >
+              Docs
+              <PiArrowRight className="button__icon transition-transform duration-300 group-hover:translate-x-1" />
+            </a>
+          )}
+        </div>
       </div>
     </div>
   );
