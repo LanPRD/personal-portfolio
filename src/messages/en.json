@@ -154,7 +154,12 @@
     "greengrocer": "Development of an e-commerce application for Android and iOS focused on selling fruits, vegetables, and fresh produce. The app provides an intuitive online shopping experience with product cards, lists, and well-defined flows. Built with Flutter and Dart, including animations, loading states, and screen transitions.",
     "unimidia": "Development of a responsive digital menu system for desktop, mobile, and Android applications. The platform includes administrative panels, TV display control, and informational cards, aimed at businesses looking to increase sales through visual communication. Built with React, TypeScript, styled-components, and Radix UI, with a future marketplace evolution planned.",
     "ledgerapi": "Development of a REST API for managing financial transactions, focused on consistency and reliability through idempotency. The system prevents duplicate operations in retry scenarios and network failures, performing automatic balance calculations and debit/credit validations. Built with .NET, Entity Framework Core, and PostgreSQL, following Clean Architecture principles, Domain-Driven Design, and automated testing.",
+    "notificationcenter": "Development of a centralized multi-channel notification system capable of orchestrating Email, SMS, and Push deliveries in a reliable and scalable manner. The platform leverages an event-driven architecture, message queues for asynchronous processing, and priority control to ensure consistent delivery even under retry scenarios and high concurrency. Built with NestJS, PostgreSQL, Prisma, and RabbitMQ, following Clean Architecture principles, clear separation of responsibilities, and a strong focus on idempotency and observability.",
     "items": {
+      "notification": {
+        "title": "Notification Center API",
+        "alt": "Notification Center API banner"
+      },
       "luckysea": {
         "title": "LuckySea",
         "alt": "LuckySea project banner"

@@ -11,6 +11,12 @@ export function PortfolioSection() {
       <div className="container overflow-initial">
         <Carousel buttons>
           <PortfolioContent
+            title={t("items.notification.title")}
+            description={t("notificationcenter")}
+            demoLink="https://github.com/LanPRD/notification-center*"
+          />
+
+          <PortfolioContent
             title={t("items.luckysea.title")}
             description={t("luckysea")}
             demoLink="https://beta.luckysea.gg/"
