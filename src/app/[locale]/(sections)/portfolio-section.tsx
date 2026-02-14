@@ -11,9 +11,16 @@ export function PortfolioSection() {
       <div className="container overflow-initial">
         <Carousel buttons>
           <PortfolioContent
+            title={t("items.mediavault.title")}
+            description={t("mediavault")}
+            demoLink="https://github.com/LanPRD/media-vault-serverless"
+            documentationLink="https://x0mue43gqj.execute-api.sa-east-1.amazonaws.com/docs"
+          />
+
+          <PortfolioContent
             title={t("items.notification.title")}
             description={t("notificationcenter")}
-            demoLink="https://github.com/LanPRD/notification-center*"
+            demoLink="https://github.com/LanPRD/notification-center"
           />
 
           <PortfolioContent
