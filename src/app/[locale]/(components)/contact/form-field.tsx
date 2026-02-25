@@ -1,3 +1,4 @@
+/* eslint-disable complexity */
 "use client";
 
 import { cn } from "@/lib/css";
@@ -44,7 +45,7 @@ export function FormField({ label, name, type = "text", rows, register, errors, 
         )}
       </label>
 
-      {type === "textarea" ? (
+      {type === "textarea" ?
         <textarea
           id={id}
           rows={rows ?? 7}
@@ -54,18 +55,22 @@ export function FormField({ label, name, type = "text", rows, register, errors, 
           aria-required={required}
           {...register(name)}
         />
-      ) : (
-        <input
+      : <input
           id={id}
           type={type}
           className={baseClasses}
           aria-invalid={!!error}
           aria-describedby={error ? errorId : undefined}
           aria-required={required}
-          autoComplete={name === "name" ? "name" : name === "email" ? "email" : undefined}
+          autoComplete={
+            name === "name" ? "name"
+            : name === "email" ?
+              "email"
+            : undefined
+          }
           {...register(name)}
         />
-      )}
+      }
 
       {error && (
         <span

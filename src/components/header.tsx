@@ -27,10 +27,11 @@ export function Header() {
   const router = useRouter();
 
   const t = useTranslations("header");
-  const { setTheme, theme, resolvedTheme } = useTheme();
+  const { setTheme, resolvedTheme } = useTheme();
   const [showMenu, setShowMenu] = useState<boolean>(false);
   const [mounted, setMounted] = useState(false);
 
+  // eslint-disable-next-line react-hooks/set-state-in-effect -- needed for hydration
   useEffect(() => setMounted(true), []);
 
   const isDark = resolvedTheme === "dark";

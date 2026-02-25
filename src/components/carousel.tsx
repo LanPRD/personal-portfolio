@@ -2,7 +2,7 @@
 
 import { KeenSliderInstance } from "keen-slider";
 import { useKeenSlider } from "keen-slider/react";
-import React, { useEffect, useState } from "react";
+import { Children, useCallback, useState } from "react";
 import { cn } from "../lib/css";
 
 interface CarouselProps {
@@ -12,9 +12,9 @@ interface CarouselProps {
 }
 
 export function Carousel({ buttons = true, breakpoints, children }: CarouselProps) {
-  const [loaded, setLoaded] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
+  const [sliderInstance, setSliderInstance] = useState<KeenSliderInstance | null>(null);
+  const [sliderRef] = useKeenSlider<HTMLDivElement>({
     loop: true,
     initial: 0,
     slides: {
@@ -22,6 +22,8 @@ export function Carousel({ buttons = true, breakpoints, children }: CarouselProp
     },
     breakpoints: breakpoints,
     created(slider) {
+      setSliderInstance(slider);
+
       let timeout: ReturnType<typeof setTimeout>;
       let mouseOver = false;
 
@@ -56,14 +58,23 @@ export function Carousel({ buttons = true, breakpoints, children }: CarouselProp
     }
   });
 
-  const childrenArray = React.Children.toArray(children);
+  const childrenArray = Children.toArray(children);
+  const slidesCount = sliderInstance?.track.details.slides.length ?? 0;
 
-  useEffect(() => {
-    if (instanceRef.current) {
-      setLoaded(true);
-      instanceRef.current?.update();
-    }
-  }, [instanceRef]);
+  const handlePrev = useCallback(() => {
+    sliderInstance?.prev();
+  }, [sliderInstance]);
+
+  const handleNext = useCallback(() => {
+    sliderInstance?.next();
+  }, [sliderInstance]);
+
+  const handleGoToSlide = useCallback(
+    (idx: number) => {
+      sliderInstance?.moveToIdx(idx);
+    },
+    [sliderInstance]
+  );
 
   return (
     <>
@@ -76,20 +87,16 @@ export function Carousel({ buttons = true, breakpoints, children }: CarouselProp
           ))}
         </div>
 
-        {loaded && instanceRef.current && buttons && (
+        {sliderInstance && buttons && (
           <>
-            <Arrow left onClick={(e: any) => e.stopPropagation() || instanceRef.current?.prev()} />
-            <Arrow onClick={(e: any) => e.stopPropagation() || instanceRef.current?.next()} />
+            <Arrow left onClick={handlePrev} />
+            <Arrow onClick={handleNext} />
           </>
         )}
       </div>
 
-      {loaded && instanceRef.current && childrenArray.length > 0 && (
-        <Dots
-          sliders={[...Array(instanceRef.current?.track.details.slides.length).keys()]}
-          instanceRef={instanceRef.current}
-          currentSlide={currentSlide}
-        />
+      {sliderInstance && childrenArray.length > 0 && (
+        <Dots sliders={[...Array(slidesCount).keys()]} onGoToSlide={handleGoToSlide} currentSlide={currentSlide} />
       )}
     </>
   );
@@ -120,7 +127,7 @@ function Arrow(props: { left?: boolean; onClick: (e: any) => void }) {
   );
 }
 
-function Dots(props: { sliders: number[]; instanceRef: KeenSliderInstance; currentSlide: number }) {
+function Dots(props: { sliders: number[]; onGoToSlide: (idx: number) => void; currentSlide: number }) {
   return (
     <div className="flex justify-center" role="tablist" aria-label="Slides">
       {props.sliders.map(idx => {
@@ -132,11 +139,9 @@ function Dots(props: { sliders: number[]; instanceRef: KeenSliderInstance; curre
             role="tab"
             aria-label={`Go to slide ${idx + 1}`}
             aria-selected={isActive}
-            onClick={() => {
-              props.instanceRef?.moveToIdx(idx);
-            }}
+            onClick={() => props.onGoToSlide(idx)}
             className={cn(
-              "border-none min-w-[44px] min-h-[44px] rounded-full",
+              "border-none min-w-11 min-h-11 rounded-full",
               "m-[2rem_4px] cursor-pointer",
               "focus:outline-none focus-visible:ring-2 focus-visible:ring-(--first-color)",
               "lg:mt-[22.4]",
@@ -144,10 +149,7 @@ function Dots(props: { sliders: number[]; instanceRef: KeenSliderInstance; curre
             )}
           >
             <span
-              className={cn(
-                "w-3 h-3 rounded-full transition-colors",
-                isActive ? "bg-(--first-color)" : "bg-[#c5c5c5]"
-              )}
+              className={cn("w-3 h-3 rounded-full transition-colors", isActive ? "bg-(--first-color)" : "bg-[#c5c5c5]")}
               aria-hidden="true"
             />
           </button>

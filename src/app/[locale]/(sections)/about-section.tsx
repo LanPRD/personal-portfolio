@@ -17,9 +17,7 @@ export function AboutSection() {
             alt={t("imageAlt")}
             width={350}
             height={350}
-            sizes="(max-width: 768px) 320px, 350px"
-            className="rounded-[0.8rem]"
-            style={{ width: "100%", height: "auto" }}
+            className="w-full h-auto rounded-[0.8rem]"
           />
         </div>
 

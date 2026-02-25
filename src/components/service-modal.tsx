@@ -15,9 +15,9 @@ export function ServicesModal({ services, title, isVisible, onClose }: ServicesM
       className={cn(
         "fixed inset-0 bg-black/50 flex items-center justify-center px-[1.6rem] z-(--z-modal)",
         "max-[350px]:px-[0.8rem]",
-        isVisible
-          ? "animate-[showModal_0.3s_ease_backwards] opacity-100 visible"
-          : "opacity-0 invisible pointer-events-none"
+        isVisible ?
+          "animate-[showModal_0.3s_ease_backwards] opacity-100 visible"
+        : "opacity-0 invisible pointer-events-none"
       )}
     >
       <div className={cn("relative bg-(--container-color) p-[2.4rem] rounded-[0.8rem]", "md:w-180")}>

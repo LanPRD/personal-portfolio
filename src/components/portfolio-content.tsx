@@ -27,13 +27,13 @@ export function PortfolioContent({ demoLink, description, title, img, documentat
           )}
         >
           <Image
-              src={img!.src}
-              alt={img!.alt}
-              className="object-cover rounded-lg"
-              width={320}
-              height={208}
-              style={{ width: "auto", height: "auto" }}
-            />
+            src={img!.src}
+            alt={img!.alt}
+            className="object-cover rounded-lg"
+            width={320}
+            height={208}
+            style={{ width: "auto", height: "auto" }}
+          />
         </div>
       )}
 

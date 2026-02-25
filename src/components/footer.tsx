@@ -60,7 +60,7 @@ export function Footer() {
           </div>
         </div>
 
-        <p className={cn("text-(length:--smaller-font-size) text-center text-white/70", "mt-(--mb-3) md:mt-[7.2rem]")}>
+        <p className={cn("text-(length:--smaller-font-size) text-center text-white", "mt-(--mb-3) md:mt-[7.2rem]")}>
           &#169; {t("copy")}
         </p>
       </div>
