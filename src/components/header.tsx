@@ -144,7 +144,7 @@ export function Header() {
             />
           </ul>
 
-          <PiXBold
+          <button
             className={cn(
               "absolute right-8 bottom-[0.8rem] text-[2.4rem]",
               "cursor-pointer text-(--first-color) hover:text-(--first-color-alt)",
@@ -152,7 +152,10 @@ export function Header() {
             )}
             id="nav-close"
             onClick={() => setShowMenu(false)}
-          />
+            aria-label="Close menu"
+          >
+            <PiXBold aria-hidden="true" />
+          </button>
         </div>
 
         <div className="nav__btns gap-3">
@@ -172,8 +175,9 @@ export function Header() {
             )}
             id="nav-toggle"
             onClick={() => setShowMenu(!showMenu)}
+            aria-label="Open menu"
           >
-            <PiSquaresFour />
+            <PiSquaresFour aria-hidden="true" />
           </button>
         </div>
       </nav>
