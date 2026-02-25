@@ -9,8 +9,9 @@ export function Social() {
         target="_blank"
         className="text-[2.4rem] text-(--first-color) hover:text-(--first-color-alt)"
         rel="noreferrer"
+        aria-label="LinkedIn profile"
       >
-        <PiLinkedinLogoFill />
+        <PiLinkedinLogoFill aria-hidden="true" />
       </a>
 
       <a
@@ -18,8 +19,9 @@ export function Social() {
         target="_blank"
         className="text-[2.4rem] text-(--first-color) hover:text-(--first-color-alt)"
         rel="noreferrer"
+        aria-label="GitHub profile"
       >
-        <PiGithubLogoFill />
+        <PiGithubLogoFill aria-hidden="true" />
       </a>
     </div>
   );

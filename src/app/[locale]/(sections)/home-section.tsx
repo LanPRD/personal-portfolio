@@ -25,9 +25,9 @@ export function HomeSection() {
           <div className={cn("col-[1/3]", "sm:col-auto")}>
             <h1 className="text-(length:--big-font-size)">{t("title")}</h1>
 
-            <h3 className="text-(length:--h3-font-size) text-(--text-color) font-(--font-medium) mb-(--mb-0-75)">
+            <p className="text-(length:--h3-font-size) text-(--text-color) font-(--font-medium) mb-(--mb-0-75)">
               {t("role")}
-            </h3>
+            </p>
 
             <p className="mb-(--mb-2)">{t("description")}</p>
 

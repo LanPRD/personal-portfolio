@@ -17,7 +17,7 @@
   "about": {
     "title": "About Me",
     "subtitle": "My introduction",
-    "description": "I am a software developer passionate about creating digital solutions that generate real impact. I have several years of experience building web and mobile applications, including Web3 projects and traditional systems. My journey includes volunteer work, technical leadership, and turning ideas into real products. I have experience with HTML, CSS, JavaScript, TypeScript, React, Next.js, Node.js, Flutter, Dart, and AWS Serverless architecture. I am a self-taught, dedicated, and persistent full stack developer with strong attention to detail and a focus on quality, performance, and accessibility. I believe that even the smallest adjustments make a difference in the final result. Outside of coding, I enjoy games, anime, traveling, hiking, nature, and graffiti. I am always looking for new challenges and professional growth.",
+    "description": "I am a software developer passionate about creating digital solutions that generate real impact. I have several years of experience building web and mobile applications, including Web3 projects and traditional systems. My journey includes volunteer work, technical leadership, and turning ideas into real products. I have experience with HTML, CSS, JavaScript, TypeScript, React, Next.js, Node.js, Flutter, Dart, C#, .NET and AWS Serverless architecture. I am a self-taught, dedicated, and persistent full stack developer with strong attention to detail and a focus on quality, performance, and accessibility. I believe that even the smallest adjustments make a difference in the final result. Outside of coding, I enjoy games, anime, traveling, hiking, nature, and graffiti. I am always looking for new challenges and professional growth.",
 
     "imageAlt": "Photo of the author Allan Prado",
     "downloadCv": "Download CV",
@@ -32,7 +32,7 @@
   "skill": {
     "title": "Skills",
     "subtitle": "My technical level",
-    "morethan": "More than 1 year",
+    "morethan": "More than 5 years",
     "groups": {
       "frontend": {
         "title": "Front-End Developer"

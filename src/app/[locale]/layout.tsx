@@ -75,6 +75,9 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   return (
     <html lang={locale} suppressHydrationWarning className={poppins.variable}>
+      <head>
+        <link rel="preload" href="/assets/img/me.webp" as="image" fetchPriority="high" />
+      </head>
       <body className={poppins.className}>
         <NextIntlClientProvider messages={messages}>
           <AppProvider>

@@ -54,8 +54,8 @@ export function ScrollUp() {
   }, []);
 
   return (
-    <a href="#" className="scrollup" id="scroll-up">
-      <PiCaretUpBold className="scrollup__icon" />
+    <a href="#home" className="scrollup" id="scroll-up" aria-label="Scroll to top">
+      <PiCaretUpBold className="scrollup__icon" aria-hidden="true" />
     </a>
   );
 }

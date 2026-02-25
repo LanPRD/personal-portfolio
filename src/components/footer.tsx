@@ -43,8 +43,9 @@ export function Footer() {
               target="_blank"
               className="text-[2rem] text-white hover:text-(--first-color-lighter) mr-(--mb-1-5) inline-block"
               rel="noreferrer"
+              aria-label="Instagram profile"
             >
-              <PiInstagramLogo />
+              <PiInstagramLogo aria-hidden="true" />
             </a>
 
             <a
@@ -52,18 +53,14 @@ export function Footer() {
               target="_blank"
               className="text-[2rem] text-white hover:text-(--first-color-lighter) mr-(--mb-1-5) inline-block"
               rel="noreferrer"
+              aria-label="LinkedIn profile"
             >
-              <PiLinkedinLogo />
+              <PiLinkedinLogo aria-hidden="true" />
             </a>
           </div>
         </div>
 
-        <p
-          className={cn(
-            "text-(length:--smaller-font-size) text-center text-(--text-color-light)",
-            "mt-(--mb-3) md:mt-[7.2rem]"
-          )}
-        >
+        <p className={cn("text-(length:--smaller-font-size) text-center text-white/70", "mt-(--mb-3) md:mt-[7.2rem]")}>
           &#169; {t("copy")}
         </p>
       </div>

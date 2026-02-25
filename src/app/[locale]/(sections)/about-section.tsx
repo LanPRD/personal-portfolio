@@ -17,7 +17,9 @@ export function AboutSection() {
             alt={t("imageAlt")}
             width={350}
             height={350}
-            className="w-full h-auto rounded-[0.8rem]"
+            sizes="(max-width: 768px) 320px, 350px"
+            className="rounded-[0.8rem]"
+            style={{ width: "100%", height: "auto" }}
           />
         </div>
 
@@ -26,7 +28,7 @@ export function AboutSection() {
 
           <div className={cn("mb-(--mb-2-5) grid grid-cols-3 gap-y-[0.4rem]", "md:justify-between")}>
             <AboutInfo time={5} typeOftime={t("info.years")} text={t("info.experience")} />
-            <AboutInfo time={4} typeOftime={t("info.years")} text={t("info.awsServerless")} />
+            <AboutInfo time={5} typeOftime={t("info.years")} text={t("info.awsServerless")} />
             <AboutInfo time={4} typeOftime={t("info.years")} text={t("info.web3")} />
             <AboutInfo time={2} typeOftime={t("info.years")} text={t("info.mobile")} />
           </div>

@@ -33,8 +33,13 @@ export function Blob() {
             transform="translate(100 100)"
           />
 
-          {/* TODO - add link (change X and Y)*/}
-          <image className="w-72" x="5" y="35" xlinkHref="/assets/img/me.webp" />
+          <image
+            className="w-72"
+            x="5"
+            y="35"
+            xlinkHref="/assets/img/me.webp"
+            fetchPriority="high"
+          />
         </g>
       </svg>
     </div>

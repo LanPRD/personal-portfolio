@@ -13,7 +13,7 @@ export function ContactSection() {
       <div className={cn("container grid gap-y-12", "sm:grid-cols-2")}>
         <div>
           <ContactInfo icon={<PiPhone />} title={t("call")} subtitle="+55 (19) 9 9340-8907" />
-          <ContactInfo icon={<PiEnvelopeSimple />} title="Email" subtitle="prdev.solutions@gmail.com" />
+          <ContactInfo icon={<PiEnvelopeSimple />} title="Email" subtitle="allanp.vba@gmail.com" />
           <ContactInfo icon={<PiMapPin />} title={t("location")} subtitle="Campinas - SP, Brazil" />
         </div>
 

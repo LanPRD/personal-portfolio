@@ -97,40 +97,60 @@ export function Carousel({ buttons = true, breakpoints, children }: CarouselProp
 
 function Arrow(props: { left?: boolean; onClick: (e: any) => void }) {
   return (
-    <svg
+    <button
+      type="button"
       onClick={props.onClick}
+      aria-label={props.left ? "Previous slide" : "Next slide"}
       className={cn(
-        "w-8 h-8 absolute top-1/2 -translate-y-1/2",
-        "fill-(--first-color) cursor-pointer",
+        "w-8 h-8 absolute top-1/2 -translate-y-1/2 bg-transparent border-none p-0",
+        "cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-(--first-color)",
         props.left ? "-left-3 lg:-left-22" : "-right-3 lg:-right-22"
       )}
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
     >
-      {props.left && <path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z" />}
-      {!props.left && <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />}
-    </svg>
+      <svg
+        className="w-full h-full fill-(--first-color)"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+      >
+        {props.left && <path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z" />}
+        {!props.left && <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />}
+      </svg>
+    </button>
   );
 }
 
 function Dots(props: { sliders: number[]; instanceRef: KeenSliderInstance; currentSlide: number }) {
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center" role="tablist" aria-label="Slides">
       {props.sliders.map(idx => {
+        const isActive = props.currentSlide === idx;
         return (
           <button
             key={idx}
+            type="button"
+            role="tab"
+            aria-label={`Go to slide ${idx + 1}`}
+            aria-selected={isActive}
             onClick={() => {
               props.instanceRef?.moveToIdx(idx);
             }}
             className={cn(
-              "border-none w-4 h-4 bg-[#c5c5c5] rounded-full",
-              "m-[2.5rem_4px] p-2 cursor-pointer",
-              "focus:outline-none",
+              "border-none min-w-[44px] min-h-[44px] rounded-full",
+              "m-[2rem_4px] cursor-pointer",
+              "focus:outline-none focus-visible:ring-2 focus-visible:ring-(--first-color)",
               "lg:mt-[22.4]",
-              props.currentSlide === idx && "bg-(--first-color)"
+              "flex items-center justify-center"
             )}
-          />
+          >
+            <span
+              className={cn(
+                "w-3 h-3 rounded-full transition-colors",
+                isActive ? "bg-(--first-color)" : "bg-[#c5c5c5]"
+              )}
+              aria-hidden="true"
+            />
+          </button>
         );
       })}
     </div>

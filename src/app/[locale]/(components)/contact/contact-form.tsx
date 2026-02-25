@@ -38,8 +38,6 @@ export function ContactForm({ translations }: ContactFormProps) {
 
       const payload = await res.json().catch(() => null);
 
-      console.log(res);
-
       if (!res.ok) {
         const msg = payload?.error || "Erro ao enviar mensagem. Tente novamente.";
         throw new Error(msg);
